@@ -1,58 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>paryatak guide</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="20x20">
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="assets/images/favicon.png"
-      type="image/gif"
-      sizes="20x20"
-    />
+    <link rel="stylesheet" href="assets/css/select2.min.css">
 
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <link href="assets/css/boxicons.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <link href="assets/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="assets/js/main2.js"></script>
+    <link rel="stylesheet" href="assets/css/style2.css">
 
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-  </head>
+</head>
+<style>
 
-  <style>
+ /* Membership Container Styling */
+      .membership-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 20px;
+      }
+
+      /* Membership Item Styling */
+      .membership-item {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 45%; /* Adjust width for desktop view */
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+
+      .membership-item img {
+        width: 100%;
+        height: 300px; /* Fixed height for the images */
+        object-fit: cover; /* Ensures the image covers the space without distortion */
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .membership-item h2 {
+        color: #8db051;
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .membership-item p {
+        color: #555;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .pdf-button {
+        text-decoration: none;
+        background-color: #8db051;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: 14px;
+      }
+
+      .pdf-button:hover {
+        background-color: #6e993a;
+      }
+
+      /* Media Queries for responsive behavior */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 24px;
+        }
+
+        .membership-container {
+          flex-direction: column;
+          width: 95%;
+        }
+
+        .membership-item {
+          width: 100%; /* Full width for mobile view */
+          margin-bottom: 20px;
+        }
+
+        .membership-item img {
+          height: 300px; /* Fixed height maintained in mobile view */
+        }
+
+        .membership-item h2 {
+          font-size: 20px;
+        }
+
+        .membership-item p {
+          font-size: 14px;
+        }
+
+        .pdf-button {
+          font-size: 12px;
+          padding: 8px 15px;
+        }
+      }
+
+
+
+
+
+
+
     /* For desktop view */
     .logo {
-      width: 600px;
-      /* Set a larger width for the logo */
-      height: auto;
-      /* Maintain aspect ratio */
-      max-width: 100%;
+        width: 600px;
+        /* Set a larger width for the logo */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-width: 100%;
     }
+
+    
 
     /* For mobile view */
     @media only screen and (max-width: 600px) {
-      .logo {
-        width: 300px;
-        /* Adjust this value for mobile view */
-        height: auto;
-        /* Maintain aspect ratio */
-      }
+        .logo {
+            width: 300px;
+            /* Adjust this value for mobile view */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
     }
-
+     
     /* Social media icons */ /* Container for icons */
     .icon-container {
       position: fixed;
@@ -82,9 +181,31 @@
       height: 100%;
       border-radius: 50%;
     } /* container for icons */
-  </style>
-  <body>
-    <div class="main-searchbar-wrapper">
+    
+
+  
+        .destination-card-style-two {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .d-card-thumb img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+        .destination-title a {
+            text-decoration: none;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+     <div class="main-searchbar-wrapper">
       <div class="container">
         <div class="multi-main-searchber">
           <div class="main-searchbar-close search-toggle">
@@ -281,7 +402,8 @@
       </div>
     </div>
 
-       
+
+     
 <!-- Header start -->
 <header>
     <div class="header-area header-style-one">
@@ -408,110 +530,453 @@
 
 <!-- Header end -->
 
-    <div class="breadcrumb breadcrumb-style-one">
-      <div class="container">
+<!-- Banner start -->
+
+<div class="breadcrumb breadcrumb-style-one">
+    <div class="container">
         <div class="col-lg-12 text-center">
-          <!-- <h2 class="breadcrumb-title">Package Details</h2> -->
-          <ul class="d-flex justify-content-center breadcrumb-items">
-            <!-- <li class="breadcrumb-item"><a href="index.html">Home</a></li> -->
-            <!-- <li class="breadcrumb-item active">Package details</li> -->
-          </ul>
+            <!-- <h2 class="breadcrumb-title">Destination</h2> -->
+            <ul class="d-flex justify-content-center breadcrumb-items">
+                <!-- <li class="breadcrumb-item"><a href="index.html">Home</a></li> -->
+                <!-- <li class="breadcrumb-item active">Destination</li> -->
+            </ul>
         </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+<br><br><br>
+
+<!-- Pdf start -->
+
+    <h1 style="text-align: center; font-weight: bolder;">Explore Our Sightseeing Memberships</h1>
+    <div class="membership-container">
+
+
+      <!-- Paryatak Guide Location Sightseeing Section -->
+      <div class="membership-item">
+        <img
+          src="/assets/images/istockphoto-1206699365-612x612.jpg"
+          alt="Paryatak Guide"
+        />
+        <h2>Paryatak Guide Location Sightseeing</h2>
+        <p>
+          Explore detailed guides on popular sightseeing locations with our
+          Paryatak Guide. This guide includes comprehensive information about
+          must-visit places, local attractions, and practical tips for a
+          memorable travel experience.
+        </p>
+        <a
+          href="/assets/images/Paraytakguide Location Sightseeing.pdf"
+          class="pdf-button"
+          download
+        >
+          Get Your Paryatak Guide PDF
+        </a>
       </div>
+      <!-- Regular Sightseeing Membership Section -->
+      <div class="membership-item">
+        <img
+          src="/assets/images/istockphoto-1221442369-612x612.jpg"
+          alt="Regular Sightseeing"
+        />
+        <h2>Regular Sightseeing Membership</h2>
+        <p>
+          Our Regular Sightseeing Membership offers exclusive access to a
+          variety of top tourist destinations, guided tours, and special
+          discounts. Enjoy a curated experience tailored to your interests and
+          preferences with our membership package.
+        </p>
+        <a
+          href="/assets/images/Regular Sightseeing Membership Price.pdf"
+          class="pdf-button"
+          download
+        >
+          Get Your Regular Guide PDF
+        </a>
+      </div>
+
+      
+    </div>
+  
+
+<!-- pdf end -->
+
+
+
+
+
+
+<!-- International and demestic start -->
+<div class="container">
+
+    <h1 style="font-weight: bolder; text-align: center;">Location - Sightseeing Places</h1>
+    <br><br>
+
+    <!-- DOMESTIC SECTION -->
+    <h2 style="color: #8db051; font-weight: bold;  text-align: center;" >Domestic</h2>
+    <div class="image-container">
+        <div class="image-placeholder">
+            <img src="/assets/images/indian pic/taj-mahal-866692_640.jpg" alt="Domestic Image Placeholder">
+        </div>
+    </div>
+    <ul class="places-list" id="domestic">
+        <li>Jaipur - Amber Fort</li>
+        <li>Kanyakumari - Vivekananda Rock</li>
+        <li>Ranikhet - Chaubatia Orchards</li>
+        <li>Corbett - Jim Corbett National Park</li>
+        <div class="more-places">
+            <li>Auli - Ski Resort</li>
+            <li>Goa - Baga Beach</li>
+            <li>Amritsar - Golden Temple</li>
+            <li>Waynard - Edakkal Caves</li>
+            <li>Yercaud - Yercaud Lake</li>
+            <li>Shirdi - Sai Baba Temple</li>
+            <li>Manali - Rohtang Pass</li>
+            <li>Gir Forest - Wildlife Sanctuary</li>
+            <li>Mussoorie - Kempty Falls</li>
+            <li>Shimla - Mall Road</li>
+            <li>Nainital - Naini Lake</li>
+            <li>Udaipur - City Palace</li>
+            <li>Jagdalpur - Chitrakote Falls</li>
+            <li>Panchgani - Table Land</li>
+            <li>Agra - Taj Mahal</li>
+            <li>Jabalpur - Marble Rocks</li>
+            <li>Matheran - Panorama Point</li>
+            <li>Ooty - Nilgiri Hills</li>
+            <li>Munnar - Tea Gardens</li>
+            <li>Mandu - Jahaz Mahal</li>
+            <li>Mukteshwar - Mukteshwar Temple</li>
+            <li>Chittorgarh - Chittorgarh Fort</li>
+            <li>Bilaspur - Achanakmar Wildlife</li>
+            <li>Ratnagiri - Ganpatipule Beach</li>
+            <li>Shivalaya - Mahamrityunjaya Temple</li>
+            <li>Resor - Sunset Point</li>
+            <li>Daman - Devka Beach</li>
+            <li>Pachmarhi - Bee Falls</li>
+            <li>Khajuraho - Kandariya Mahadeva Temple</li>
+            <li>Leh Ladakh - Pangong Lake</li>
+            <li>Chitrakoot - Ramghat</li>
+            <li>Raipur - Mahant Ghasidas Museum</li>
+            <li>Bhopal - Upper Lake</li>
+            <li>Indore - Rajwada Palace</li>
+            <li>Dewas - Tekri Mata Temple</li>
+            <li>Narsinghpur - Narmada Ghat</li>
+            <li>Shri Lanka - Temple of the Tooth</li>
+            <li>Gwalior - Gwalior Fort</li>
+            <li>Durg - Maitri Bagh</li>
+            <li>Bhilai - Durg Science Centre</li>
+            <li>Visakhapatnam - RK Beach</li>
+        </div>
+        <button class="button" onclick="showMorePlaces('domestic')">Show More Places</button>
+    </ul>
+
+    <br><br>
+
+    <!-- INTERNATIONAL SECTION -->
+    <h2 style="color: #8db051; font-weight: bold; text-align: center;">International</h2>
+    <div class="image-container">
+        <div class="image-placeholder">
+            <img src="/assets/images/indian pic/sydney-opera-house-354375_640.jpg" alt="International Image Placeholder">
+        </div>
+    </div>
+    <ul class="places-list" id="international">
+        <li>Singapore - Marina Bay Sands</li>
+        <li>Perth - Kings Park</li>
+        <li>Amsterdam - Van Gogh Museum</li>
+        <li>Bali - Uluwatu Temple</li>
+        <div class="more-places">
+            <li>Athens - Acropolis</li>
+            <li>Barcelona - Sagrada Familia</li>
+            <li>Bangkok - Grand Palace</li>
+            <li>Phuket - Patong Beach</li>
+            <li>Budapest - Buda Castle</li>
+            <li>Dubai - Burj Khalifa</li>
+            <li>Krabi - Railay Beach</li>
+            <li>Tokyo - Tokyo Tower</li>
+            <li>Sydney - Sydney Opera House</li>
+            <li>Berlin - Brandenburg Gate</li>
+            <li>Florence - Uffizi Gallery</li>
+            <li>Hong Kong - Victoria Peak</li>
+            <li>Koh Samui - Big Buddha</li>
+            <li>Miyako - Miyako Island</li>
+            <li>Kuala Lumpur - Petronas Towers</li>
+            <li>Antalya - Duden Waterfalls</li>
+            <li>Kyoto - Fushimi Inari Shrine</li>
+            <li>Langkawi - Sky Bridge</li>
+            <li>Santorini - Oia Village</li>
+            <li>Lucerne - Chapel Bridge</li>
+            <li>Macau - Ruins of St. Paul's</li>
+            <li>Madrid - Royal Palace</li>
+            <li>Venice - Grand Canal</li>
+            <li>Vienna - Schönbrunn Palace</li>
+            <li>Zurich - Lake Zurich</li>
+            <li>Pattaya - Sanctuary of Truth</li>
+            <li>Beijing - Great Wall of China</li>
+            <li>Cairns - Great Barrier Reef</li>
+            <li>Frankfurt - Römer Square</li>
+            <li>Gold Coast - Surfers Paradise</li>
+            <li>Guangzhou - Canton Tower</li>
+            <li>Toronto - CN Tower</li>
+            <li>Innsbruck - Golden Roof</li>
+            <li>Interlaken - Harder Kulm</li>
+            <li>Istanbul - Hagia Sophia</li>
+            <li>Jakarta - National Monument</li>
+            <li>Shri Lanka - Temple of the Tooth</li>
+            <li>Koh Samui - Big Buddha</li>
+            <li>Kuala Lumpur - Petronas Towers</li>
+            <li>Antalya - Duden Waterfalls</li>
+            <li>Kyoto - Fushimi Inari Shrine</li>
+            <li>Langkawi - Sky Bridge</li>
+            <li>Santorini - Oia Village</li>
+            <li>Lucerne - Chapel Bridge</li>
+            <li>Macau - Ruins of St. Paul's</li>
+            <li>Madrid - Royal Palace</li>
+            <li>Venice - Grand Canal</li>
+            <li>Vienna - Schönbrunn Palace</li>
+            <li>Zurich - Lake Zurich</li>
+        </div>
+        <button class="button" onclick="showMorePlaces('international')">Show More Places</button>
+    </ul>
+
+</div>
+<!-- International and demestic end -->
+
+
+
+
+
+<!-- International propterty list  -->
+<div class="destination-wrapper pt-110">
+    <div class="container">
+        <h1 style="text-align: center; margin: 40px; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">Property List International</h1>
+    <div class="row g-3">
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/dubai-tower-arab-khalifa-162031.jpeg" alt height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter1.html">Dubai</a></h4>
+    <div class="place-count">
+    <!-- <span>15</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-11105015.jpeg" alt  height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter2.html">Hong Kong</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-4847189.jpeg" alt height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter3.html">Bangkok</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-1842332.jpeg" alt height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter4.html">Toronto</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-2166559.jpeg" alt height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter5.html">Bali</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-967292.jpeg" alt  height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter6.html">Amsterdam</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-2773226.jpeg" alt  height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter7.html">Singapore</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="destination-card-style-two">
+    <div class="d-card-thumb">
+    <img src="assets/images/international/pexels-photo-2845013.jpeg" alt  height="250px">
+    </div>
+    <div class="d-card-content">
+    <h4 class="destination-title"><a href="inter8.html">Sydney</a></h4>
+    <div class="place-count">
+    <!-- <span>45</span> Place -->
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+<!-- International property  list -->
+
+<!-- domestic Property list -->
+<div class="container pt-110">
+    <h1 style="font-weight: bolder; text-align: center;"> Property List Domestic</h1>
+<br>
+    <div class="row" id="destination-gallery">
+        <!-- Images will be loaded here by JavaScript -->
     </div>
 
-    <!-- banner end -->
-
-    <!-- Booking request form start -->
-<div class="container mt-120">
-  <form id="sightseeing_booking_form">
-    <div class="contact-form-wrap">
-      <h4>Sightseeing Booking Form</h4>
-      <p>Please send your query using the format below for each booking:</p>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="guest_name">Guest Name</label>
-            <input
-              type="text"
-              placeholder="Enter guest name"
-              id="guest_name"
-              required
-            />
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="location_name">Location Name</label>
-            <input
-              type="text"
-              placeholder="Enter location name"
-              id="location_name"
-              required
-            />
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="custom-input-group">
-            <label for="sightseeing_date1">Sightseeing Date</label>
-            <input type="date" id="sightseeing_date1" required />
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="number_of_persons">Number of Persons</label>
-            <input
-              type="number"
-              placeholder="Enter number of persons"
-              id="number_of_persons"
-              required
-            />
-          </div>
-        </div>
-      </div>
-      <div class="custom-input-group">
-        <label for="message">Additional Information</label>
-        <textarea
-          id="message"
-          cols="20"
-          rows="7"
-          placeholder="Enter any additional information"
-        ></textarea>
-      </div>
-      <div class="custom-input-group">
-        <div class="submite-btn">
-  <button 
-    type="button" 
-    onclick="sendToWhatsApp()" 
-    style="
-      background-color: #007bff; /* Blue background color */
-      color: white; /* White text color */
-      border: none; /* Remove border */
-      padding: 10px 20px; /* Add padding */
-      border-radius: 15px; /* Rounded corners */
-      font-size: 16px; /* Adjust font size */
-      cursor: pointer; /* Pointer cursor on hover */
-      transition: background-color 0.3s ease; /* Smooth background color transition */
-    "
-  >
-    Send Booking Request
-  </button>
+    <nav>
+        <ul class="pagination pagination-style-one justify-content-center pt-50">
+            <li class="page-item page-arrow" id="prev"><a class="page-link" href="#"><i class="bi bi-chevron-double-left"></i></a></li>
+            <li class="page-item active" data-page="1"><a class="page-link" href="#">1</a></li>
+            <li class="page-item" data-page="2"><a class="page-link" href="#">2</a></li>
+            <li class="page-item" data-page="3"><a class="page-link" href="#">3</a></li>
+            <li class="page-item page-arrow" id="next"><a class="page-link" href="#"><i class="bi bi-chevron-double-right"></i></a></li>
+        </ul>
+    </nav>
 </div>
+<!-- categories list  -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = [
+            { src: 'assets/images/indian pic/india-7326048_640.jpg', title: 'Shimla', details: 'destination-details.html' },
+            { src: 'assets/images/indian pic/istockphoto-2154433338-612x612.jpg', title: 'Mussoorie', details: 'destination details2.html' },
+            { src: 'assets/images/indian pic/istockphoto-1682183202-612x612.jpg', title: 'Manali', details: 'destination details3.html' },
+            { src: 'assets/images/indian pic/istockphoto-938975958-612x612.jpg', title: 'Jaipur', details: 'destination details4.html' },
+            { src: 'assets/images/indian pic/nature-4403564_640.jpg', title: 'Nainital', details: 'destination details5.html' },
+            { src: 'assets/images/indian pic/green-3404205_1280.jpg', title: 'Chandigarh', details: 'destination details6.html' },
+            { src: 'assets/images/indian pic/istockphoto-1215274990-612x612.jpg', title: 'Hyderabad', details: 'destination details7.html' },
+            { src: 'assets/images/indian pic/istockphoto-539018660-612x612.jpg', title: 'Mumbai', details: 'destination details8.html' },
+            { src: 'assets/images/indian pic/istockphoto-949396238-612x612.jpg', title: 'Munnar', details: 'destination details9.html' },
+            { src: 'assets/images/indian pic/taj-mahal-866692_640.jpg', title: 'Agra', details: 'destination details10.html' },
+            { src: 'assets/images/indian pic/istockphoto-519361010-612x612.jpg', title: 'Corbett', details: 'destination details11.html' },
+            { src: 'assets/images/indian pic/istockphoto-808900036-612x612.jpg', title: 'Chennai', details: 'destination details12.html' },
+            { src: 'assets/images/indian pic/city-palace-3229617_640.jpg', title: 'Udaipur', details: 'destination details13.html' },
+            { src: 'assets/images/indian pic/istockphoto-2161510610-612x612.jpg', title: 'Jaisalmer', details: 'destination details14.html' },
+            { src: 'assets/images/indian pic/architecture-4738623_640.jpg', title: 'Amritsar', details: 'destination details15.html' },
+            { src: 'assets/images/indian pic/istockphoto-2138282385-612x612.jpg', title: 'New Delhi', details: 'destination details16.html' },
+            { src: 'assets/images/indian pic/istockphoto-1212950691-612x612.jpg', title: 'Rishikesh', details: 'destination details17.html' },
+            { src: 'assets/images/indian pic/mahashivratri-4817055_640.jpg', title: 'Ahmedabad', details: 'destination details18.html' },
+            { src: 'assets/images/indian pic/ranikhet-india-2714252_1280.jpg', title: 'Ranikhet', details: 'destination details19.html' },
+            { src: 'assets/images/indian pic/ooty-4477913_640.jpg', title: 'Ooty', details: 'destination details20.html' }
+        ];
 
-      </div>
-    </div>
-  </form>
-</div>
+        const itemsPerPage = 8;
+        let currentPage = 1;
 
+        function loadPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const currentImages = images.slice(start, end);
 
+            const gallery = document.getElementById('destination-gallery');
+            gallery.innerHTML = '';
 
-        <!-- Booking request form end -->
+            currentImages.forEach(image => {
+                const col = document.createElement('div');
+                col.className = 'col-lg-3 col-md-4 col-sm-6';
+                col.innerHTML = `
+                    <div class="destination-card-style-two">
+                        <div class="d-card-thumb">
+                            <img src="${image.src}" alt="${image.title}" height="210px">
+                        </div>
+                        <div class="d-card-content">
+                            <h4 class="destination-title"><a href="${image.details}">${image.title}</a></h4>
+                        </div>
+                    </div>
+                `;
+                gallery.appendChild(col);
+            });
 
-    <!-- Social icons -->
+            updatePagination(page);
+        }
+
+        function updatePagination(page) {
+            const paginationItems = document.querySelectorAll('.pagination .page-item');
+            paginationItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            const activeItem = document.querySelector(`.pagination .page-item[data-page="${page}"]`);
+            if (activeItem) activeItem.classList.add('active');
+
+            document.getElementById('prev').classList.toggle('disabled', page === 1);
+            document.getElementById('next').classList.toggle('disabled', page === Math.ceil(images.length / itemsPerPage));
+        }
+
+        document.querySelectorAll('.pagination .page-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const page = parseInt(this.getAttribute('data-page'));
+                if (!isNaN(page)) {
+                    currentPage = page;
+                    loadPage(currentPage);
+                }
+            });
+        });
+
+        document.getElementById('prev').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadPage(currentPage);
+            }
+        });
+
+        document.getElementById('next').addEventListener('click', function() {
+            if (currentPage < Math.ceil(images.length / itemsPerPage)) {
+                currentPage++;
+                loadPage(currentPage);
+            }
+        });
+
+        loadPage(currentPage);
+    });
+</script>
+
+  <!-- Social icons -->
     <div class="icon-container">
       <div class="icon whatsapp">
         <a
@@ -539,8 +1004,7 @@
     </div>
 
     <!-- Social icons -->
-
-    <!-- Footer  start-->
+ <!-- Footer  start-->
     <div class="footer-area mt-110">
       <div class="footer-main-wrapper">
         <div class="footer-vactor">
@@ -738,39 +1202,25 @@
 
     <!-- Footer  end-->
 
+      <!-- Font Awesome for download icon -->
     <script
-      data-cfasync="false"
-      src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
     ></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/chain_fade.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/jquery.fancybox.min.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
 
-    <script src="assets/js/main.js"></script>
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/chain_fade.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
 
-    <script>
-  function sendToWhatsApp() {
-    const guestName = document.getElementById("guest_name").value;
-    const locationName = document.getElementById("location_name").value;
-    const sightseeingDate = document.getElementById("sightseeing_date1").value;
-    const numberOfPersons = document.getElementById("number_of_persons").value;
-    const message = document.getElementById("message").value;
+<script src="assets/js/main.js"></script>
+</body>
 
-    const whatsappMessage = `Guest Name: ${guestName}%0A
-Location: ${locationName}%0A
-Sightseeing Date: ${sightseeingDate}%0A
-Number of Persons: ${numberOfPersons}%0A
-Additional Info: ${message}`;
 
-    const whatsappUrl = `https://wa.me/919518279289?text=${whatsappMessage}`;
-    window.open(whatsappUrl, "_blank");
-  }
-</script>
-  </body>
 
 </html>

@@ -3,139 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sightseeing Memberships</title>
-    <style>
-      .pdf-button {
-        display: inline-flex;
-        align-items: center;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: #ffffff;
-        background-color: #8db051;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-
-      .pdf-button:hover {
-        background-color: #6c8a3d; /* Background changes, text stays white */
-        color: #ffffff;
-      }
-
-      .pdf-button i {
-        margin-right: 10px;
-      }
-
-      .membership-heading {
-        text-align: center;
-        font-size: 28px;
-        color: #333;
-        margin-bottom: 30px;
-      }
-    </style>
+    <title>Document</title>
   </head>
   <body>
-    <!-- Page Heading -->
-    <h1 class="membership-heading">Explore Our Sightseeing Memberships</h1>
-
-    <div
-      class="membership-container"
-      style="
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 20px;
-        width: 80%;
-        margin: 0 auto;
-      "
-    >
-      <!-- Regular Sightseeing Membership Section -->
-      <div
-        style="
-          background-color: #ffffff;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          width: 48%;
-          text-align: center;
-        "
-      >
-        <img
-          src="/assets/images/istockphoto-1221442369-612x612.jpg"
-          alt="Regular Sightseeing"
-          style="
-            max-width: 100%;
-            height: 250px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-          "
-        />
-        <h2 style="color: #8db051; font-weight: bold; margin-bottom: 10px">
-          Regular Sightseeing Membership
-        </h2>
-        <p style="margin-bottom: 20px">
-          Our Regular Sightseeing Membership offers exclusive access to a
-          variety of top tourist destinations, guided tours, and special
-          discounts. Enjoy a curated experience tailored to your interests and
-          preferences with our membership package.
-        </p>
-        <div style="text-align: center">
-          <a
-            href="/assets/images/Regular Sightseeing Membership Price.pdf"
-            class="pdf-button"
-            download
-          >
-            <i class="fas fa-file-download"></i> Get Your Membership Guide PDF
-          </a>
+    <div class="container mt-120">
+      <form id="sightseeing_booking_form">
+        <div class="contact-form-wrap">
+          <h4>Sightseeing Booking Form</h4>
+          <p>Please send your query using the format below for each booking:</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="custom-input-group">
+                <label for="guest_name">Guest Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter guest name"
+                  id="guest_name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="custom-input-group">
+                <label for="location_name">Location Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter location name"
+                  id="location_name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="custom-input-group">
+                <label for="sightseeing_date1">Sightseeing Date</label>
+                <input type="date" id="sightseeing_date1" required />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="custom-input-group">
+                <label for="number_of_persons">Number of Persons</label>
+                <input
+                  type="number"
+                  placeholder="Enter number of persons"
+                  id="number_of_persons"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="custom-input-group">
+                <label for="membership_id">Membership ID</label>
+                <input
+                  type="text"
+                  placeholder="Enter membership ID"
+                  id="membership_id"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="custom-input-group">
+            <label for="message">Additional Information</label>
+            <textarea
+              id="message"
+              cols="20"
+              rows="7"
+              placeholder="Enter any additional information"
+            ></textarea>
+          </div>
+          <div class="custom-input-group">
+            <div class="submite-btn">
+              <button type="button" onclick="sendToWhatsApp()">
+                Send Booking Request
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <!-- Paryatak Guide Location Sightseeing Section -->
-      <div
-        style="
-          background-color: #ffffff;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          width: 48%;
-          text-align: center;
-        "
-      >
-        <img
-          src="/assets/images/istockphoto-1206699365-612x612.jpg"
-          alt="Paryatak Guide"
-          style="
-            max-width: 100%;
-            height: 250px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-          "
-        />
-        <h2 style="color: #8db051; font-weight: bold; margin-bottom: 10px">
-          Paryatak Guide Location Sightseeing
-        </h2>
-        <p style="margin-bottom: 20px">
-          Explore detailed guides on popular sightseeing locations with our
-          Paryatak Guide. This guide includes comprehensive information about
-          must-visit places, local attractions, and practical tips for a
-          memorable travel experience.
-        </p>
-        <div style="text-align: center">
-          <a
-            href="/assets/images/Paraytakguide Location Sightseeing.pdf"
-            class="pdf-button"
-            download
-          >
-            <i class="fas fa-file-download"></i> Get Your Paryatak Guide PDF
-          </a>
-        </div>
-      </div>
+      </form>
     </div>
 
-    <!-- Font Awesome for download icon -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      function sendToWhatsApp() {
+        const guestName = document.getElementById("guest_name").value;
+        const locationName = document.getElementById("location_name").value;
+        const sightseeingDate =
+          document.getElementById("sightseeing_date1").value;
+        const numberOfPersons =
+          document.getElementById("number_of_persons").value;
+        const membershipId = document.getElementById("membership_id").value;
+        const message = document.getElementById("message").value;
+
+        const whatsappMessage = `Guest Name: ${guestName}%0A
+Location: ${locationName}%0A
+Sightseeing Date: ${sightseeingDate}%0A
+Number of Persons: ${numberOfPersons}%0A
+Membership ID: ${membershipId}%0A
+Additional Info: ${message}`;
+
+        const whatsappUrl = `https://wa.me/919518279289?text=${whatsappMessage}`;
+        window.open(whatsappUrl, "_blank");
+      }
+    </script>
   </body>
 </html>
