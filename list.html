@@ -1,113 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container mt-120">
-      <form id="sightseeing_booking_form">
-        <div class="contact-form-wrap">
-          <h4>Sightseeing Booking Form</h4>
-          <p>Please send your query using the format below for each booking:</p>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="custom-input-group">
-                <label for="guest_name">Guest Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter guest name"
-                  id="guest_name"
-                  required
-                />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="custom-input-group">
-                <label for="location_name">Location Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter location name"
-                  id="location_name"
-                  required
-                />
-              </div>
-            </div>
+<div class="guide-area guide-style-one pt-110">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-head-alpha text-center mx-auto">
+          <h2>Meet Our Expert Guides</h2>
+          <p>
+            At Paryatak.club, our guides are passionate about sharing their deep
+            knowledge and love for travel. They ensure every journey is filled
+            with unforgettable memories.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="guide-card-alpha">
+          <div class="guide-image">
+            <img src="assets/images/guide/guide-md3.png" alt="Guide Image" />
+            <ul class="guide-social-links">
+              <li>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+              </li>
+            </ul>
           </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="custom-input-group">
-                <label for="sightseeing_date1">Sightseeing Date</label>
-                <input type="date" id="sightseeing_date1" required />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="custom-input-group">
-                <label for="number_of_persons">Number of Persons</label>
-                <input
-                  type="number"
-                  placeholder="Enter number of persons"
-                  id="number_of_persons"
-                  required
-                />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="custom-input-group">
-                <label for="membership_id">Membership ID</label>
-                <input
-                  type="text"
-                  placeholder="Enter membership ID"
-                  id="membership_id"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          <div class="custom-input-group">
-            <label for="message">Additional Information</label>
-            <textarea
-              id="message"
-              cols="20"
-              rows="7"
-              placeholder="Enter any additional information"
-            ></textarea>
-          </div>
-          <div class="custom-input-group">
-            <div class="submite-btn">
-              <button type="button" onclick="sendToWhatsApp()">
-                Send Booking Request
-              </button>
-            </div>
+          <div class="guide-content">
+            <h4 class="guide-name">Ravi Verma</h4>
+            <h6 class="guide-designation">Tour Guide</h6>
           </div>
         </div>
-      </form>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="guide-card-alpha">
+          <div class="guide-image">
+            <img src="assets/images/guide/guide-m2.png" alt="Guide Image" />
+            <ul class="guide-social-links">
+              <li>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="guide-content">
+            <h4 class="guide-name">Aditi Sharma</h4>
+            <h6 class="guide-designation">Tour Guide</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="guide-card-alpha">
+          <div class="guide-image">
+            <img
+              src="assets/images/reviewer/reviewer-1.png"
+              alt="Guide Image"
+              height="270px"
+            />
+            <ul class="guide-social-links">
+              <li>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="guide-content">
+            <h4 class="guide-name">Raj Patel</h4>
+            <h6 class="guide-designation">Tour Guide</h6>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script>
-      function sendToWhatsApp() {
-        const guestName = document.getElementById("guest_name").value;
-        const locationName = document.getElementById("location_name").value;
-        const sightseeingDate =
-          document.getElementById("sightseeing_date1").value;
-        const numberOfPersons =
-          document.getElementById("number_of_persons").value;
-        const membershipId = document.getElementById("membership_id").value;
-        const message = document.getElementById("message").value;
-
-        const whatsappMessage = `Guest Name: ${guestName}%0A
-Location: ${locationName}%0A
-Sightseeing Date: ${sightseeingDate}%0A
-Number of Persons: ${numberOfPersons}%0A
-Membership ID: ${membershipId}%0A
-Additional Info: ${message}`;
-
-        const whatsappUrl = `https://wa.me/919518279289?text=${whatsappMessage}`;
-        window.open(whatsappUrl, "_blank");
-      }
-    </script>
-  </body>
-</html>
+  </div>
+</div>
