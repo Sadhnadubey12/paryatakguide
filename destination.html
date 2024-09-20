@@ -30,8 +30,24 @@
 
 
 </head>
+
+ 
 <style>
 
+    
+  .category-box {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  .category-box:hover {
+    color: orange /* Hover color */
+  }
+
+  .category-box:visited {
+    color: orange; /* Visited link color */
+  }
  /* Membership Container Styling */
       .membership-container {
         display: flex;
@@ -152,35 +168,6 @@
         }
     }
      
-    /* Social media icons */ /* Container for icons */
-    .icon-container {
-      position: fixed;
-      z-index: 1000;
-      bottom: 50px;
-      right: 10px; /* border:2px solid red; */
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .icon-container .icon {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background-color: transparent;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-      transition: transform 0.3s ease-in-out;
-    }
-    .icon-container .icon:hover {
-      transform: scale(1.1); /* Zoom effect on hover */
-    }
-    .icon-container .icon img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    } /* container for icons */
     
 
   
@@ -315,93 +302,84 @@
       </div>
     </div>
 
+     <!-- category start -->
     <div class="category-sidebar-wrapper">
-      <div class="category-sidebar">
-        <div
-          class="category-header d-flex justify-content-between align-items-center"
-        >
-          <h4>Category</h4>
-          <div class="category-toggle">
-            <i class="bi bi-x-lg"></i>
-          </div>
-        </div>
-        <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-umbrella-beach" style="color: orange"></i>
-                <!-- Holiday Icon -->
-              </div>
-              <h5>Holiday</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-plane" style="color: orange"></i>
-                <!-- Flight Icon -->
-              </div>
-              <h5>Flight</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-hotel" style="color: orange"></i>
-                <!-- Hotel Icon -->
-              </div>
-              <h5>Hotel</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-ship" style="color: orange"></i>
-                <!-- Cruise Ship Icon -->
-              </div>
-              <h5>Cruise</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-train" style="color: orange"></i>
-                <!-- Train Icon -->
-              </div>
-              <h5>E-Railway Ticket</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-bus" style="color: orange"></i>
-                <!-- Bus Icon -->
-              </div>
-              <h5>Bus</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-car" style="color: orange"></i>
-                <!-- Car Icon -->
-              </div>
-              <h5>Car</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-passport" style="color: orange"></i>
-                <!-- Passport Icon -->
-              </div>
-              <h5>Visa</h5>
-            </a>
-          </div>
-        </div>
+  <div class="category-sidebar">
+    <div class="category-header d-flex justify-content-between align-items-center">
+      <h4>Category</h4>
+      <div class="category-toggle">
+        <i class="bi bi-x-lg"></i>
       </div>
     </div>
-
+    <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Holiday%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-umbrella-beach" style="color: orange"></i>
+          </div>
+          <h5>Holiday</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Flight%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-plane" style="color: orange"></i>
+          </div>
+          <h5>Flight</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Hotel%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-hotel" style="color: orange"></i>
+          </div>
+          <h5>Hotel</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Cruise%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-ship" style="color: orange"></i>
+          </div>
+          <h5>Cruise</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=E-Railway%20Ticket%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-train" style="color: orange"></i>
+          </div>
+          <h5>E-Railway Ticket</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Bus%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-bus" style="color: orange"></i>
+          </div>
+          <h5>Bus</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Car%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-car" style="color: orange"></i>
+          </div>
+          <h5>Car</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Visa%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-passport" style="color: orange"></i>
+          </div>
+          <h5>Visa</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- category end -->
 
      
 <!-- Header start -->
@@ -976,34 +954,7 @@
     });
 </script>
 
-  <!-- Social icons -->
-    <div class="icon-container">
-      <div class="icon whatsapp">
-        <a
-          href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-          target="_blank"
-        >
-          <img src="/assets/images/indian pic/whatsapp.png" alt="WhatsApp" />
-        </a>
-      </div>
-
-      <div class="icon instagram">
-        <a
-          href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
-          target="_blank"
-        >
-          <img src="/assets/images/indian pic/instagram.png" alt="Instagram" />
-        </a>
-      </div>
-
-      <div class="icon pbmit-call-text">
-        <a href="tel:+91 9555695021" target="_blank">
-          <img src="/assets/images/indian pic/telephone.png" alt="telephone" />
-        </a>
-      </div>
-    </div>
-
-    <!-- Social icons -->
+  
  <!-- Footer  start-->
     <div class="footer-area mt-110">
       <div class="footer-main-wrapper">
@@ -1015,7 +966,7 @@
             <div class="col-lg-4">
               <div class="footer-about text-lg-start text-center">
                 <p>
-                  Explore the world with Paryatak.club, where every journey is
+                  Explore the world with Paryatak guide, where every journey is
                   crafted with care. Discover unique destinations and create
                   unforgettable memories.
                 </p>
@@ -1172,7 +1123,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-4 col-md-6 order-lg-1 order-3">
               <div class="copyright-link text-lg-start text-center">
-                <p>Copyright 2024 | Design By <a href="#"> paryatak.club</a></p>
+                <p>Copyright 2024 | Design By <a href="#"> paryatak guide</a></p>
               </div>
             </div>
             <div class="col-lg-4 order-lg-2 order-1">

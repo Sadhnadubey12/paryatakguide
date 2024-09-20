@@ -33,7 +33,142 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
 
+  
   <style>
+
+        
+  .category-box {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  .category-box:hover {
+    color: orange /* Hover color */
+  }
+
+  .category-box:visited {
+    color: orange; /* Visited link color */
+  }
+
+    
+ 
+      .pv {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .container-pv {
+        background-color: #fff;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .header .title {
+        font-size: 24px;
+        color: #2f2f7f;
+        font-weight: bold;
+      }
+
+      .header .subtitle {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .text-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .left-content,
+      .right-content {
+        width: 45%;
+        font-size: 12px;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .table-container {
+        width: 100%;
+        overflow-x: auto; /* Allows horizontal scrolling for small screens */
+        margin: 0 auto;
+      }
+
+      table {
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        margin-top: 10px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        color: #2f2f7f;
+        font-weight: bold;
+      }
+
+      /* Responsive adjustments */
+      @media screen and (min-width: 768px) {
+        .text-content {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .left-content,
+        .right-content {
+          width: 45%;
+        }
+
+        .table-container {
+          width: 80%;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .header .title {
+          font-size: 20px;
+        }
+
+        .header .subtitle {
+          font-size: 12px;
+        }
+
+        table {
+          font-size: 12px;
+        }
+
+        .left-content,
+        .right-content {
+          font-size: 11px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .text-content {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    
+    
     /* For desktop view */
     .logo {
       width: 600px;
@@ -53,35 +188,7 @@
       }
     }
 
-     /* Social media icons */ /* Container for icons */
-    .icon-container {
-      position: fixed;
-      z-index: 1000;
-      bottom: 50px;
-      right: 10px; /* border:2px solid red; */
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .icon-container .icon {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background-color: transparent;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-      transition: transform 0.3s ease-in-out;
-    }
-    .icon-container .icon:hover {
-      transform: scale(1.1); /* Zoom effect on hover */
-    }
-    .icon-container .icon img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    } /* container for icons */
+    
   </style>
   <body>
     <div class="main-searchbar-wrapper">
@@ -193,93 +300,84 @@
         </div>
       </div>
     </div>
-
+<!-- category start -->
     <div class="category-sidebar-wrapper">
-      <div class="category-sidebar">
-        <div
-          class="category-header d-flex justify-content-between align-items-center"
-        >
-          <h4>Category</h4>
-          <div class="category-toggle">
-            <i class="bi bi-x-lg"></i>
-          </div>
-        </div>
-        <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-umbrella-beach" style="color: orange"></i>
-                <!-- Holiday Icon -->
-              </div>
-              <h5>Holiday</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-plane" style="color: orange"></i>
-                <!-- Flight Icon -->
-              </div>
-              <h5>Flight</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-hotel" style="color: orange"></i>
-                <!-- Hotel Icon -->
-              </div>
-              <h5>Hotel</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-ship" style="color: orange"></i>
-                <!-- Cruise Ship Icon -->
-              </div>
-              <h5>Cruise</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-train" style="color: orange"></i>
-                <!-- Train Icon -->
-              </div>
-              <h5>E-Railway Ticket</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-bus" style="color: orange"></i>
-                <!-- Bus Icon -->
-              </div>
-              <h5>Bus</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-car" style="color: orange"></i>
-                <!-- Car Icon -->
-              </div>
-              <h5>Car</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-passport" style="color: orange"></i>
-                <!-- Passport Icon -->
-              </div>
-              <h5>Visa</h5>
-            </a>
-          </div>
-        </div>
+  <div class="category-sidebar">
+    <div class="category-header d-flex justify-content-between align-items-center">
+      <h4>Category</h4>
+      <div class="category-toggle">
+        <i class="bi bi-x-lg"></i>
       </div>
     </div>
+    <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Holiday%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-umbrella-beach" style="color: orange"></i>
+          </div>
+          <h5>Holiday</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Flight%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-plane" style="color: orange"></i>
+          </div>
+          <h5>Flight</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Hotel%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-hotel" style="color: orange"></i>
+          </div>
+          <h5>Hotel</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Cruise%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-ship" style="color: orange"></i>
+          </div>
+          <h5>Cruise</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=E-Railway%20Ticket%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-train" style="color: orange"></i>
+          </div>
+          <h5>E-Railway Ticket</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Bus%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-bus" style="color: orange"></i>
+          </div>
+          <h5>Bus</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Car%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-car" style="color: orange"></i>
+          </div>
+          <h5>Car</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Visa%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-passport" style="color: orange"></i>
+          </div>
+          <h5>Visa</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- category end -->
 
     <!-- Header start -->
 <header>
@@ -623,200 +721,227 @@
     <!-- Offer details end -->
 
 <!-- Detailed from start  -->
-<div class="container mt-120">
-  <form action="#" id="contact_form">
-    <div class="contact-form-wrap">
-      <h4>DKDCompany Sightseeing Booking & Payment Details</h4>
-      
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="guest_name">Guest Name</label>
-            <input type="text" id="guest_name" placeholder="Guest Name">
-          </div>
+<div class="pv"></div>
+      <div class="container-pv">
+        <!-- Centered PV Header -->
+        <div class="header">
+          <div class="title">P.V (Point Value)</div>
+          <div class="subtitle">Cover your Dream location</div>
         </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="membership_id">Membership ID</label>
-            <input type="text" id="membership_id" placeholder="Membership ID">
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="custom-input-group">
-            <label for="sightseeing_date_1">Sightseeing Date</label>
-            <input type="date" id="sightseeing_date_1">
+        <!-- Content Section with Left, Middle (Table), and Right Sections -->
+        <div class="text-content">
+          <!-- Left content -->
+          <div class="left-content">
+            Complementary holiday package<br />
+            Discount & Free trip plan
           </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="number_of_person">Number of Persons</label>
-            <input type="number" id="number_of_person" placeholder="Number of Persons">
+          <!-- Table in the middle -->
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Level</th>
+                  <th>References</th>
+                  <th>P.V</th>
+                  <th>Benefit</th>
+                </tr>
+              </thead>
+               <tbody></tbody>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 1 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >1 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  3 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  700 PV
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Discount 7%
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 2 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >2 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  2 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  1000 PV
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Discount 10%
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 3 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >3 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  9 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  1700 PV
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Discount 17%
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 4 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >4 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  12 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  2400 PV
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Discount 24%
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 5 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >5 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  24 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  4800 PV
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Discount 48%
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 6 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >6 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  48 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  9600 PV
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Discount 96%
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 7 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >7 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  96 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  5 Years
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Free 2-star
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 8 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >8 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  192 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  10 Years
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Free 3-star
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 9 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >9 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  384 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  15 Years
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Free 4-star
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  <a
+                    href="mailto:bookingparyatak@gmail.com?subject=Level 10 Query"
+                    style="color: #007bff; text-decoration: none"
+                    >10 Level</a
+                  >
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  786 Reference
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  20 Years
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #ddd">
+                  Free 5-star
+                </td>
+              </tr>
+            </tbody>
+            </table>
           </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="location_name">Location Name</label>
-            <input type="text" id="location_name" placeholder="Location Name">
-          </div>
-        </div>
-      </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-      <br><br>
-      <h4>Sightseeing Login Amount Details</h4>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="eiarhpl">EIARHPL</label>
-            <input type="text" id="eiarhpl" placeholder="EIARHPL">
+          <!-- Right content -->
+          <div class="right-content">
+            Free Group Trip<br />
+            Earn loyalty rewards
           </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="purchase_price">Purchase Price</label>
-            <input type="text" id="purchase_price" placeholder="Purchase Price">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="admin_fee">Admin Fee</label>
-            <input type="text" id="admin_fee" placeholder="Admin Fee">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="total">Total</label>
-            <input type="text" id="total" placeholder="Total">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="deposit">Deposit</label>
-            <input type="text" id="deposit" placeholder="Deposit">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="balance">Balance</label>
-            <input type="text" id="balance" placeholder="Balance">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="down_payment_mode">Down Payment Mode</label>
-            <input type="text" id="down_payment_mode" placeholder="Down Payment Mode">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="amount">Amount</label>
-            <input type="text" id="amount" placeholder="Amount">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="mode">Mode</label>
-            <input type="text" id="mode" placeholder="Mode">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="check_no_tid">Check No./TID No.</label>
-            <input type="text" id="check_no_tid" placeholder="Check No./TID No.">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="bank_card_name">Name of Bank/Card No.</label>
-            <input type="text" id="bank_card_name" placeholder="Name of Bank/Card No.">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="date">Date</label>
-            <input type="date" id="date">
-          </div>
-        </div>
-      </div>
-
-      <div class="custom-input-group">
-        <label class="checkbox-container"> 
-          I/we agree to pay down payment/part payment Rs. by DC/CC/cash/Cheque & Authorize to swap my card No. (Non-refundable)
-          <input type="checkbox" class="custom-checkbox">
-          <span class="checkmark"></span>
-        </label>
-      </div>
-
-      <div class="custom-input-group">
-        <label class="checkbox-container">
-          I/we will not claim for change back at any moment on the above details. This approval form is not a money receipt. This is valid only with the purchase agreement signed & Paryatak-Club Money Receipt Issued.
-          <input type="checkbox" class="custom-checkbox">
-          <span class="checkmark"></span>
-        </label>
-      </div>
-
-      <div class="custom-input-group">
-          <h4> Sightseeing Expert Advisor</h4>
-          <br>
-
-          <h6>For Office use only</h6>
-         
-          <span class="checkmark"></span>
-        </label>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="sales_login_no">Sales Login No.</label>
-            <input type="text" id="sales_login_no" placeholder="Sales Login No.">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-input-group">
-            <label for="approved_by_members">Approved by Members</label>
-            <input type="text" id="approved_by_members" placeholder="Approved by Members">
-          </div>
-        </div>
-      </div>
-
-      <div class="custom-input-group">
-        <label>Signature</label>
-        <input type="text" placeholder="................">
-      </div>
-
-      <div class="custom-input-group">
-        <div class="submite-btn">
-          <button type="submit">Submit</button>
         </div>
       </div>
     </div>
-  </form>
-</div>
-
-
-
 
 
 
@@ -824,35 +949,7 @@
 
 
 <!-- Detailed from end  -->
-    <!-- Social icons -->
-    <div class="icon-container">
-      <div class="icon whatsapp">
-        <a
-          href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-          target="_blank"
-        >
-          <img src="/assets/images/indian pic/whatsapp.png" alt="WhatsApp" />
-        </a>
-      </div>
-
-      <div class="icon instagram">
-        <a
-          href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
-          target="_blank"
-        >
-          <img src="/assets/images/indian pic/instagram.png" alt="Instagram" />
-        </a>
-      </div>
-
-      <div class="icon pbmit-call-text">
-        <a href="tel:+91 9555695021" target="_blank">
-          <img src="/assets/images/indian pic/telephone.png" alt="telephone" />
-        </a>
-      </div>
-    </div>
-
-    <!-- Social icons -->
-
+    
    <!-- Footer  start-->
     <div class="footer-area mt-110">
       <div class="footer-main-wrapper">

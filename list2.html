@@ -4,152 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PV Point Value</title>
-    <style>
-      .pv {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-      }
-
-      .container-pv {
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    "
+  >
+    <div
+      style="
         background-color: #fff;
         padding: 20px;
-        max-width: 1000px;
+        max-width: 800px;
         margin: 30px auto;
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      }
+      "
+    >
+      <!-- Centered PV Header -->
+      <div style="text-align: center">
+        <div
+          style="
+            font-size: 24px;
+            color: #2f2f7f;
+            font-weight: bold;
+            margin-bottom: 10px;
+          "
+        >
+          P.V (Point Value)
+        </div>
+        <div style="font-size: 14px; color: #555; margin-bottom: 20px">
+          Cover your Dream location
+        </div>
+      </div>
 
-      .header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .header .title {
-        font-size: 24px;
-        color: #2f2f7f;
-        font-weight: bold;
-      }
-
-      .header .subtitle {
-        font-size: 14px;
-        color: #555;
-      }
-
-      .text-content {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .left-content,
-      .right-content {
-        width: 45%;
-        font-size: 12px;
-        color: #333;
-        line-height: 1.5;
-      }
-
-      .table-container {
-        width: 100%;
-        overflow-x: auto; /* Allows horizontal scrolling for small screens */
-        margin: 0 auto;
-      }
-
-      table {
-        width: 100%;
-        text-align: left;
-        font-size: 14px;
-        margin-top: 10px;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-      }
-
-      th {
-        color: #2f2f7f;
-        font-weight: bold;
-      }
-
-      /* Responsive adjustments */
-      @media screen and (min-width: 768px) {
-        .text-content {
-          width: 100%;
+      <!-- Content Section with Left, Middle (Table), and Right Sections -->
+      <div
+        style="
+          display: flex;
           justify-content: space-between;
-        }
-
-        .left-content,
-        .right-content {
-          width: 45%;
-        }
-
-        .table-container {
-          width: 80%;
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        .header .title {
-          font-size: 20px;
-        }
-
-        .header .subtitle {
-          font-size: 12px;
-        }
-
-        table {
-          font-size: 12px;
-        }
-
-        .left-content,
-        .right-content {
-          font-size: 11px;
-          width: 100%;
-          text-align: center;
-        }
-
-        .text-content {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="pv">
-      <div class="container-pv">
-        <!-- Centered PV Header -->
-        <div class="header">
-          <div class="title">P.V (Point Value)</div>
-          <div class="subtitle">Cover your Dream location</div>
+          align-items: flex-start;
+        "
+      >
+        <!-- Left content slightly above -->
+        <div
+          style="
+            width: 25%;
+            text-align: left;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            margin-top: -20px;
+          "
+        >
+          Complementary holiday package<br />
+          Discount & Free trip plan
         </div>
 
-        <!-- Content Section with Left, Middle (Table), and Right Sections -->
-        <div class="text-content">
-          <!-- Left content -->
-          <div class="left-content">
-            Complementary holiday package<br />
-            Discount & Free trip plan
-          </div>
-
-          <!-- Table in the middle -->
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Level</th>
-                  <th>References</th>
-                  <th>P.V</th>
-                  <th>Benefit</th>
-                </tr>
-              </thead>
-               <tbody></tbody>
+        <!-- Table in the middle -->
+        <div style="width: 50%; margin-top: -20px">
+          <table
+            style="
+              width: 100%;
+              text-align: left;
+              font-size: 14px;
+              margin-top: 10px;
+              border-collapse: collapse;
+            "
+          >
+            <thead>
+              <tr>
+                <th
+                  style="
+                    padding: 10px;
+                    color: #2f2f7f;
+                    font-weight: bold;
+                    border-bottom: 1px solid #ddd;
+                  "
+                >
+                  Level
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    color: #2f2f7f;
+                    font-weight: bold;
+                    border-bottom: 1px solid #ddd;
+                  "
+                >
+                  References
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    color: #2f2f7f;
+                    font-weight: bold;
+                    border-bottom: 1px solid #ddd;
+                  "
+                >
+                  P.V
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    color: #2f2f7f;
+                    font-weight: bold;
+                    border-bottom: 1px solid #ddd;
+                  "
+                >
+                  Benefit
+                </th>
+              </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td style="padding: 10px; border-bottom: 1px solid #ddd">
                   <a
@@ -331,14 +300,22 @@
                 </td>
               </tr>
             </tbody>
-            </table>
-          </div>
+          </table>
+        </div>
 
-          <!-- Right content -->
-          <div class="right-content">
-            Free Group Trip<br />
-            Earn loyalty rewards
-          </div>
+        <!-- Right content slightly above -->
+        <div
+          style="
+            width: 25%;
+            text-align: right;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            margin-top: -20px;
+          "
+        >
+          Free Group Trip<br />
+          Earn loyalty rewards
         </div>
       </div>
     </div>

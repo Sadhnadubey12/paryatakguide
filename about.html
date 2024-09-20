@@ -35,55 +35,40 @@
   </head>
 
   <style>
-    /* For desktop view */
-    .logo {
-      width: 600px;
-      /* Set a larger width for the logo */
-      height: auto;
-      /* Maintain aspect ratio */
-      max-width: 100%;
-    }
-
-    /* For mobile view */
-    @media only screen and (max-width: 600px) {
+      /* For desktop view */
       .logo {
-        width: 300px;
-        /* Adjust this value for mobile view */
+        width: 600px;
+        /* Set a larger width for the logo */
         height: auto;
         /* Maintain aspect ratio */
+        max-width: 100%;
       }
-    }
 
-    /* Social media icons */ /* Container for icons */
-    .icon-container {
-      position: fixed;
-      z-index: 1000;
-      bottom: 50px;
-      right: 10px; /* border:2px solid red; */
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .icon-container .icon {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background-color: transparent;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-      transition: transform 0.3s ease-in-out;
-    }
-    .icon-container .icon:hover {
-      transform: scale(1.1); /* Zoom effect on hover */
-    }
-    .icon-container .icon img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    } /* container for icons */
-  </style>
+      /* For mobile view */
+      @media only screen and (max-width: 600px) {
+        .logo {
+          width: 300px;
+          /* Adjust this value for mobile view */
+          height: auto;
+          /* Maintain aspect ratio */
+        }
+      }
+
+      
+  .category-box {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  .category-box:hover {
+    color: orange /* Hover color */
+  }
+
+  .category-box:visited {
+    color: orange; /* Visited link color */
+  }
+    </style>
   <body>
     <!-- <div class="preloader">
 <div class="loader">
@@ -204,94 +189,84 @@
       </div>
     </div>
 
-    <!-- Categories start -->
+     <!-- category start -->
     <div class="category-sidebar-wrapper">
-      <div class="category-sidebar">
-        <div
-          class="category-header d-flex justify-content-between align-items-center"
-        >
-          <h4>Category</h4>
-          <div class="category-toggle">
-            <i class="bi bi-x-lg"></i>
-          </div>
-        </div>
-        <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-umbrella-beach" style="color: orange"></i>
-                <!-- Holiday Icon -->
-              </div>
-              <h5>Holiday</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-plane" style="color: orange"></i>
-                <!-- Flight Icon -->
-              </div>
-              <h5>Flight</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-hotel" style="color: orange"></i>
-                <!-- Hotel Icon -->
-              </div>
-              <h5>Hotel</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-ship" style="color: orange"></i>
-                <!-- Cruise Ship Icon -->
-              </div>
-              <h5>Cruise</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-train" style="color: orange"></i>
-                <!-- Train Icon -->
-              </div>
-              <h5>E-Railway Ticket</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-bus" style="color: orange"></i>
-                <!-- Bus Icon -->
-              </div>
-              <h5>Bus</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-car" style="color: orange"></i>
-                <!-- Car Icon -->
-              </div>
-              <h5>Car</h5>
-            </a>
-          </div>
-          <div class="col">
-            <a class="category-box" href="package.html">
-              <div class="cate-icon mx-auto">
-                <i class="fas fa-passport" style="color: orange"></i>
-                <!-- Passport Icon -->
-              </div>
-              <h5>Visa</h5>
-            </a>
-          </div>
-        </div>
+  <div class="category-sidebar">
+    <div class="category-header d-flex justify-content-between align-items-center">
+      <h4>Category</h4>
+      <div class="category-toggle">
+        <i class="bi bi-x-lg"></i>
       </div>
     </div>
-    <!-- categories end -->
+    <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Holiday%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-umbrella-beach" style="color: orange"></i>
+          </div>
+          <h5>Holiday</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Flight%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-plane" style="color: orange"></i>
+          </div>
+          <h5>Flight</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Hotel%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-hotel" style="color: orange"></i>
+          </div>
+          <h5>Hotel</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Cruise%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-ship" style="color: orange"></i>
+          </div>
+          <h5>Cruise</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=E-Railway%20Ticket%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-train" style="color: orange"></i>
+          </div>
+          <h5>E-Railway Ticket</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Bus%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-bus" style="color: orange"></i>
+          </div>
+          <h5>Bus</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Car%20Booking%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-car" style="color: orange"></i>
+          </div>
+          <h5>Car</h5>
+        </a>
+      </div>
+      <div class="col">
+        <a class="category-box" href="mailto:bookingparyatak@gmail.com?subject=Visa%20Inquiry">
+          <div class="cate-icon mx-auto">
+            <i class="fas fa-passport" style="color: orange"></i>
+          </div>
+          <h5>Visa</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- category end -->
    
     <!-- Header start -->
 <header>
@@ -502,7 +477,7 @@
                   <span style="color: #8db051">What We Offer</span>
                 </h2>
                 <p style="line-height: 1.8; font-size: 16px">
-                  <strong>Paryatak.club</strong> is a leading sales training
+                  <strong>Paryatak guide</strong> is a leading sales training
                   institute and trip provider in India, founded by Divesh Dubey
                   in 2024. Initially, it offered small and medium tour packages
                   through its web and app platforms. The company covers a wide
@@ -511,7 +486,7 @@
                   various transportation options like car rentals and cruises.
                 </p>
                 <p style="line-height: 1.8; font-size: 16px">
-                  <strong>At Paryatak.club,</strong> we pride ourselves on an
+                  <strong>At Paryatak guide,</strong> we pride ourselves on an
                   expanding network of leisure resorts, clubs, hotels, and
                   wellness centers across top holiday destinations in India and
                   abroad. We are a passionate team of creative travel
@@ -545,7 +520,7 @@
                   <li>Special Offers on International and Domestic Tours</li>
                 </ul>
                 <p style="font-weight: bold; font-size: 18px; margin-top: 20px">
-                  Feel the Happiness with Paryatak.club—crafting unique
+                  Feel the Happiness with Paryatak guide—crafting unique
                   experiences and unforgettable journeys tailored just for you!
                 </p>
               </div>
@@ -561,7 +536,7 @@
                 style="font-weight: bold; font-size: 32px; margin-bottom: 20px"
               >
                 Why Package Book With
-                <span style="color: #8db051">Paryatak.club?</span>
+                <span style="color: #8db051">Paryatak guide?</span>
               </h2>
               <div class="achievement-counter-cards">
                 <div
@@ -577,7 +552,7 @@
                     <h6 style="font-size: 18px">Incredible Journeys</h6>
                   </div>
                   <p style="font-size: 16px; line-height: 1.8">
-                    At Paryatak.club, we specialize in crafting unforgettable
+                    At Paryatak guide, we specialize in crafting unforgettable
                     tours that captivate your senses. From tranquil escapes to
                     exhilarating adventures, every journey is designed to
                     inspire and delight.
@@ -597,7 +572,7 @@
                   </div>
                   <p style="font-size: 16px; line-height: 1.8">
                     Discover a world of breathtaking destinations with
-                    Paryatak.club. Whether you're seeking hidden gems or popular
+                    Paryatak guide. Whether you're seeking hidden gems or popular
                     landmarks, our tours bring you closer to the beauty and
                     culture of each unique place.
                   </p>
@@ -615,7 +590,7 @@
                   </div>
                   <p style="font-size: 16px; line-height: 1.8">
                     Experience the awe-inspiring beauty of majestic mountains
-                    with Paryatak.club. Our curated tours offer breathtaking
+                    with Paryatak guide. Our curated tours offer breathtaking
                     views and unforgettable adventures amidst towering peaks and
                     serene landscapes.
                   </p>
@@ -789,9 +764,9 @@
         <div class="row align-items-center">
           <div class="col-lg-8">
             <div class="section-head-alpha">
-              <h2>What Our Clients Say About Paryatak.club</h2>
+              <h2>What Our Clients Say About Paryatak guide</h2>
               <p>
-                At Paryatak.club, we take pride in creating unforgettable travel
+                At Paryatak guide, we take pride in creating unforgettable travel
                 experiences. Here’s what our travelers have to say about their
                 journeys with us.
               </p>
@@ -841,7 +816,7 @@
                 </div>
                 <div class="testimonial-body">
                   <p>
-                    Paryatak.club planned everything. It was a stress-free
+                    Paryatak guide planned everything. It was a stress-free
                     experience from start to finish.
                   </p>
                   <div class="testimonial-bottom">
@@ -917,7 +892,7 @@
                 </div>
                 <div class="testimonial-body">
                   <p>
-                    A seamless travel experience. Paryatak.club made our trip
+                    A seamless travel experience. Paryatak guide made our trip
                     unforgettable.
                   </p>
                   <div class="testimonial-bottom">
@@ -949,98 +924,102 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="section-head-alpha text-center mx-auto">
-              <h2>Meet Our Expert Guides</h2>
+          <h2>Explore Our Paryatak Guides</h2>
               <p>
-                At Paryatak.club, our guides are passionate about sharing their
+                At Paryatak guide, our guides are passionate about sharing their
                 deep knowledge and love for travel. They ensure every journey is
                 filled with unforgettable memories.
               </p>
+
+          
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <div class="guide-card-alpha">
-              <div class="guide-image">
-                <img
-                  src="assets/images/guide/guide-md3.png"
-                  alt="Guide Image"
-                />
-                <ul class="guide-social-links">
-                  <li>
-                    <a href="#"><i class="bx bxl-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="guide-content">
-                <h4 class="guide-name">Ravi Verma</h4>
-                <h6 class="guide-designation">Tour Guide</h6>
-              </div>
-            </div>
+           <div class="guide-card-alpha">
+  <div class="guide-image">
+    <img src="assets/images/istockphoto-168507706-612x612.jpg" alt="Guide Image" />
+    <ul class="guide-social-links">
+      <li><a href="https://www.instagram.com/Paryatak guide?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ==" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+      <li><a href="https://www.youtube.com/@Paryatak guide01" target="_blank"><i class="bx bxl-youtube"></i></a></li>
+    </ul>
+  </div>
+  <div class="guide-content">
+    <h4 class="guide-name">Paryatak Guide</h4>
+    <!-- <h6 class="guide-designation">Ravi Verma - Tour Guide</h6> -->
+    <p class="guide-description">
+      Download the full tour and travel details in the PDF to explore more about
+      your journey.
+    </p>
+    <!-- Add the PDF link or description -->
+    <div class="pdf-download mt-2">
+      <a href="/assets/images/Travel Tips - paryatakinfo.pdf" class="btn btn-secondary" download>
+        Download Tour & Travel PDF
+      </a>
+    </div>
+  </div>
+</div>
+
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="guide-card-alpha">
-              <div class="guide-image">
-                <img src="assets/images/guide/guide-m2.png" alt="Guide Image" />
-                <ul class="guide-social-links">
-                  <li>
-                    <a href="#"><i class="bx bxl-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="guide-content">
-                <h4 class="guide-name">Aditi Sharma</h4>
-                <h6 class="guide-designation">Tour Guide</h6>
-              </div>
-            </div>
+        <div class="guide-card-alpha">
+  <div class="guide-image">
+    <img src="assets/images/istockphoto-649356542-612x612.jpg" alt="Guide Image" />
+    <ul class="guide-social-links">
+      <li><a href="https://www.instagram.com/Paryatak guide?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ==" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+      <li><a href="https://www.youtube.com/@Paryatak guide01" target="_blank"><i class="bx bxl-youtube"></i></a></li>
+    </ul>
+  </div>
+  <div class="guide-content">
+    <h4 class="guide-name">Paryatak Guide</h4>
+    <!-- <h6 class="guide-designation">Ravi Verma - Tour Guide</h6> -->
+    <p class="guide-description">
+      Download the full tour and travel details in the PDF to explore more about
+      your journey.
+    </p>
+    <!-- Add the PDF link or description -->
+    <div class="pdf-download mt-2">
+      <a href="/assets/images/Paraytakguide Location Sightseeing.pdf" class="btn btn-secondary" download>
+        Download Tour & Travel PDF
+      </a>
+    </div>
+  </div>
+</div>
+
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="guide-card-alpha">
-              <div class="guide-image">
-                <img
-                  src="assets/images/reviewer/reviewer-1.png"
-                  alt="Guide Image"
-                  height="240px"
-                />
-                <ul class="guide-social-links">
-                  <li>
-                    <a href="#"><i class="bx bxl-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="guide-content">
-                <h4 class="guide-name">Raj Patel</h4>
-                <h6 class="guide-designation">Tour Guide</h6>
-              </div>
-            </div>
+          <div class="guide-card-alpha">
+  <div class="guide-image">
+    <img src="assets/images/istockphoto-485614909-612x612.jpg" alt="Guide Image" />
+    <ul class="guide-social-links">
+      <li><a href="https://www.instagram.com/Paryatak guide?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ==" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+      <li><a href="https://www.youtube.com/@Paryatak guide01" target="_blank"><i class="bx bxl-youtube"></i></a></li>
+    </ul>
+  </div>
+  <div class="guide-content">
+    <h4 class="guide-name">Paryatak Guide</h4>
+    <!-- <h6 class="guide-designation">Ravi Verma - Tour Guide</h6> -->
+    <p class="guide-description">
+      Download the full tour and travel details in the PDF to explore more about
+      your journey.
+    </p>
+    <!-- Add the PDF link or description -->
+    <div class="pdf-download mt-2">
+      <a href="/assets/images/Paryatakinfo Reference Plan-2.pdf" class="btn btn-secondary" download>
+        Download Tour & Travel PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+
           </div>
+
+          
         </div>
       </div>
     </div>
@@ -1056,7 +1035,7 @@
               <h2>Latest Travel Stories</h2>
               <p>
                 Stay updated with the latest travel trends, tips, and stories
-                curated by our expert team at Paryatak.club. Discover your next
+                curated by our expert team at Paryatak guide. Discover your next
                 adventure with us.
               </p>
             </div>
@@ -1165,34 +1144,7 @@
 
     <!-- blog end -->
 
-    <!-- Social icons -->
-    <div class="icon-container">
-      <div class="icon whatsapp">
-        <a
-          href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-          target="_blank"
-        >
-          <img src="/assets/images/indian pic/whatsapp.png" alt="WhatsApp" />
-        </a>
-      </div>
-
-      <div class="icon instagram">
-        <a
-          href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
-          target="_blank"
-        >
-          <img src="/assets/images/indian pic/instagram.png" alt="Instagram" />
-        </a>
-      </div>
-
-      <div class="icon pbmit-call-text">
-        <a href="tel:+91 9555695021" target="_blank">
-          <img src="/assets/images/indian pic/telephone.png" alt="telephone" />
-        </a>
-      </div>
-    </div>
-
-    <!-- Social icons -->
+    
 
     <!-- Footer  start-->
     <div class="footer-area mt-110">
@@ -1205,7 +1157,7 @@
             <div class="col-lg-4">
               <div class="footer-about text-lg-start text-center">
                 <p>
-                  Explore the world with Paryatak.club, where every journey is
+                  Explore the world with Paryatak guide, where every journey is
                   crafted with care. Discover unique destinations and create
                   unforgettable memories.
                 </p>
@@ -1217,7 +1169,7 @@
                   >
                     <li>
                       <a
-                        href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
+                        href="https://www.instagram.com/Paryatak guide?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
                         target="_blank"
                         ><i class="bx bxl-instagram"></i
                       ></a>
@@ -1225,7 +1177,7 @@
                     <!-- <li><a href="#"><i class="bx bxl-facebook"></i></a></li> -->
                     <li>
                       <a
-                        href="https://www.youtube.com/@Paryatak.Club01"
+                        href="https://www.youtube.com/@Paryatak guide01"
                         target="_blank"
                         ><i class="bx bxl-youtube"></i
                       ></a>
@@ -1362,7 +1314,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-4 col-md-6 order-lg-1 order-3">
               <div class="copyright-link text-lg-start text-center">
-                <p>Copyright 2024 | Design By <a href="#"> paryatak.club</a></p>
+                <p>Copyright 2024 | Design By <a href="#"> Paryatak guide</a></p>
               </div>
             </div>
             <div class="col-lg-4 order-lg-2 order-1">
