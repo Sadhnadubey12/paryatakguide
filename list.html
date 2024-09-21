@@ -1,346 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PV Point Value</title>
-    <style>
-      .pv {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-      }
+<div
+  class="container mt-120"
+  style="position: relative; max-width: 100%; margin: 0 auto"
+>
+  <!-- Blurred Background Image -->
+  <div
+    style="
+      background-image: url('/assets/images/istockphoto-168507706-612x612.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      border-radius: 10px;
+    "
+  ></div>
 
-      .container-pv {
-        background-color: #fff;
-        padding: 20px;
-        max-width: 1000px;
-        margin: 30px auto;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      }
+  <!-- Form Content (Clear) -->
+  <div
+    class="contact-form-wrap"
+    style="
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    "
+  >
+    <!-- Form Title -->
+    <h4 style="color: #d41123; font-weight: bold; text-align: center">
+      Sightseeing Driver and Entrepreneurship
+    </h4>
 
-      .header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+    <!-- Description Section -->
+    <p style="color: #333; font-size: 14px; text-align: center">
+      Whoever is interested in sightseeing and activity tours as a way of
+      earning money can fill out their bio-data via the link below. By
+      connecting with "Parayatakguide," you can obtain your income ID completely
+      free. This will allow you to receive new tourist leads via WhatsApp
+      directly, helping you form a sightseeing group.
+      <br /><br />
+      Thank you!
+    </p>
 
-      .header .title {
-        font-size: 24px;
-        color: #2f2f7f;
-        font-weight: bold;
-      }
-
-      .header .subtitle {
-        font-size: 14px;
-        color: #555;
-      }
-
-      .text-content {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .left-content,
-      .right-content {
-        width: 45%;
-        font-size: 12px;
-        color: #333;
-        line-height: 1.5;
-      }
-
-      .table-container {
-        width: 100%;
-        overflow-x: auto; /* Allows horizontal scrolling for small screens */
-        margin: 0 auto;
-      }
-
-      table {
-        width: 100%;
-        text-align: left;
-        font-size: 14px;
-        margin-top: 10px;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-      }
-
-      th {
-        color: #2f2f7f;
-        font-weight: bold;
-      }
-
-      /* Responsive adjustments */
-      @media screen and (min-width: 768px) {
-        .text-content {
-          width: 100%;
-          justify-content: space-between;
-        }
-
-        .left-content,
-        .right-content {
-          width: 45%;
-        }
-
-        .table-container {
-          width: 80%;
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        .header .title {
-          font-size: 20px;
-        }
-
-        .header .subtitle {
-          font-size: 12px;
-        }
-
-        table {
-          font-size: 12px;
-        }
-
-        .left-content,
-        .right-content {
-          font-size: 11px;
-          width: 100%;
-          text-align: center;
-        }
-
-        .text-content {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="pv">
-      <div class="container-pv">
-        <!-- Centered PV Header -->
-        <div class="header">
-          <div class="title">P.V (Point Value)</div>
-          <div class="subtitle">Cover your Dream location</div>
+    <!-- Form Starts Here -->
+    <form action="#" id="inquiry_form">
+      <div
+        class="custom-input-group"
+        style="display: flex; gap: 15px; margin-bottom: 15px"
+      >
+        <div style="flex: 1">
+          <label for="license" style="font-weight: bold; color: #000"
+            >Licence No *</label
+          >
+          <input
+            type="text"
+            id="license"
+            placeholder="Licence No"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
         </div>
-
-        <!-- Content Section with Left, Middle (Table), and Right Sections -->
-        <div class="text-content">
-          <!-- Left content -->
-          <div class="left-content">
-            Complementary holiday package<br />
-            Discount & Free trip plan
-          </div>
-
-          <!-- Table in the middle -->
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Level</th>
-                  <th>References</th>
-                  <th>P.V</th>
-                  <th>Benefit</th>
-                </tr>
-              </thead>
-               <tbody></tbody>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 1 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >1 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  3 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  700 PV
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Discount 7%
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 2 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >2 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  2 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  1000 PV
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Discount 10%
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 3 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >3 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  9 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  1700 PV
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Discount 17%
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 4 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >4 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  12 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  2400 PV
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Discount 24%
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 5 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >5 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  24 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  4800 PV
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Discount 48%
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 6 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >6 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  48 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  9600 PV
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Discount 96%
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 7 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >7 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  96 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  5 Years
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Free 2-star
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 8 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >8 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  192 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  10 Years
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Free 3-star
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 9 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >9 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  384 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  15 Years
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Free 4-star
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  <a
-                    href="mailto:bookingparyatak@gmail.com?subject=Level 10 Query"
-                    style="color: #007bff; text-decoration: none"
-                    >10 Level</a
-                  >
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  786 Reference
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  20 Years
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #ddd">
-                  Free 5-star
-                </td>
-              </tr>
-            </tbody>
-            </table>
-          </div>
-
-          <!-- Right content -->
-          <div class="right-content">
-            Free Group Trip<br />
-            Earn loyalty rewards
-          </div>
+        <div style="flex: 1">
+          <label for="owner_name" style="font-weight: bold; color: #000"
+            >Owner Name *</label
+          >
+          <input
+            type="text"
+            id="owner_name"
+            placeholder="Owner Name"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
         </div>
       </div>
-    </div>
-  </body>
-</html>
+
+      <div
+        class="custom-input-group"
+        style="display: flex; gap: 15px; margin-bottom: 15px"
+      >
+        <div style="flex: 1">
+          <label for="location" style="font-weight: bold; color: #000"
+            >Location *</label
+          >
+          <input
+            type="text"
+            id="location"
+            placeholder="Location"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
+        </div>
+        <div style="flex: 1">
+          <label for="experience" style="font-weight: bold; color: #000"
+            >Experience *</label
+          >
+          <input
+            type="text"
+            id="experience"
+            placeholder="Experience"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
+        </div>
+      </div>
+
+      <div
+        class="custom-input-group"
+        style="display: flex; gap: 15px; margin-bottom: 15px"
+      >
+        <div style="flex: 1">
+          <label for="office_address" style="font-weight: bold; color: #000"
+            >Office Address *</label
+          >
+          <input
+            type="text"
+            id="office_address"
+            placeholder="Office Address"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
+        </div>
+        <div style="flex: 1">
+          <label for="service_name" style="font-weight: bold; color: #000"
+            >Service Name *</label
+          >
+          <input
+            type="text"
+            id="service_name"
+            placeholder="Service Name"
+            required
+            style="
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            "
+          />
+        </div>
+      </div>
+
+      <!-- Submission Section -->
+      <div class="submit-btn" style="text-align: center">
+        <button
+          type="submit"
+          style="
+            background-color: #d41123;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          "
+        >
+          Send Inquiry
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
