@@ -65,7 +65,53 @@
   .category-box:visited {
     color: orange; /* Visited link color */
   }
-    </style>
+
+  
+    .testimonial-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        color: black;
+    }
+
+    .testimonial-card:hover .testimonial-body p,
+    .testimonial-card:hover .reviewer-info h4,
+    .testimonial-card:hover .reviewer-info h6 {
+        color: black;
+    }
+
+    .testimonial-card-top img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    /* Default text color */
+.testimonial-card,
+.testimonial-card .testimonial-body p,
+.testimonial-card .reviewer-info h4,
+.testimonial-card .reviewer-info h6 {
+    color: black; /* Default text color */
+}
+
+/* Hover effect */
+.testimonial-card:hover,
+.testimonial-card:hover .testimonial-body p,
+.testimonial-card:hover .reviewer-info h4,
+.testimonial-card:hover .reviewer-info h6 {
+    color: black; /* Hover text color */
+}
+
+/* Ensuring 'Traveller' text color remains black */
+.testimonial-bottom .reviewer-info h6 {
+    color: black; /* 'Traveller' color */
+}
+
+</style>
+
+
   </head>
 
   <body>
@@ -78,115 +124,155 @@
 </div>
 </div> -->
 
-    <div class="main-searchbar-wrapper">
-      <div class="container">
-        <div class="multi-main-searchber">
-          <div class="main-searchbar-close search-toggle">
-            <i class="bi bi-x-lg"></i>
-          </div>
-          <form action="#" method="post" id="main_searchbar">
-            <div class="row g-4">
-              <div class="col-lg-10">
-                <div class="row gx-0 gy-4">
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single destination-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-geo-alt"></i>
-                      </div>
-                      <div class="searchbox-input">
-                        <label for="deatination_drop">Destination</label>
-                        <select
-                          data-placeholder="Where Are You Going?"
-                          id="deatination_drop"
-                        >
-                          <option value>Where Are You Going?</option>
-                          <optgroup label="India">
-                            <option>Solt Lake</option>
-                            <option>Kolkata</option>
-                            <option>Mohamia</option>
-                            <option>Mumbai</option>
-                            <option>New Delhi</option>
-                          </optgroup>
-                          <optgroup label=" Bangladash">
-                            <option>Cox's Bazer</option>
-                            <option>Rangamati</option>
-                            <option>Banderban</option>
-                          </optgroup>
-                        </select>
-                      </div>
-                    </div>
+<!-- search box start-->
+<div class="main-searchbar-wrapper">
+  <div class="container">
+    <div class="multi-main-searchber">
+      <div class="main-searchbar-close search-toggle">
+        <i class="bi bi-x-lg"></i>
+      </div>
+      <form id="main_searchbar" onsubmit="sendEmail(event)">
+        <div class="row g-4">
+          <div class="col-lg-10">
+            <div class="row gx-0 gy-4">
+              <!-- Destination Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single destination-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-geo-alt"></i>
                   </div>
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single type-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-text-paragraph"></i>
-                      </div>
-                      <div class="searchbox-input">
-                        <label for="activity-dropdown">Travel Type</label>
-                        <select
-                          class="defult-select-drowpown"
-                          data-placeholder="All Activity"
-                          id="activity-dropdown"
-                        >
-                          <option value>All Activity</option>
-                          <option value="1">Type 1</option>
-                          <option value="2">Type 2</option>
-                          <option value="3">Type 3</option>
-                          <option value="4">Type 4</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single type-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-person-plus"></i>
-                      </div>
-                      <div class="searchbox-input">
-                        <label for="person-dropdown">Person</label>
-                        <select
-                          class="defult-select-drowpown"
-                          id="person-dropdown"
-                        >
-                          <option selected value="0">01</option>
-                          <option value="1">02</option>
-                          <option value="2">03</option>
-                          <option value="3">04</option>
-                          <option value="4">05</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single date-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-capslock"></i>
-                      </div>
-                      <div class="searchbox-input date-picker-input">
-                        <label for="datepicker">When</label>
-                        <input
-                          placeholder="Select your date"
-                          type="text"
-                          name="checkIn"
-                          id="datepicker"
-                          value
-                          class="calendar"
-                        />
-                      </div>
-                    </div>
+                  <div class="searchbox-input">
+                    <label for="deatination_drop">Destination</label>
+                    <select data-placeholder="Where Are You Going?" id="deatination_drop">
+                      <option value>Where Are You Going?</option>
+                      <optgroup label="India">
+    <option>Agra</option>
+    <option>Ahmedabad</option>
+    <option>Bangalore</option>
+    <option>Chennai</option>
+    <option>Delhi</option>
+    <option>Erode</option>
+    <option>Faridabad</option>
+    <option>Guwahati</option>
+    <option>Hyderabad</option>
+    <option>Indore</option>
+    <option>Jaipur</option>
+    <option>Kolkata</option>
+    <option>Lucknow</option>
+    <option>Mumbai</option>
+    <option>Nagpur</option>
+    <option>Ooty</option>
+    <option>Patna</option>
+    <option>Quilon (Kollam)</option>
+    <option>Ranchi</option>
+    <option>Surat</option>
+    <option>Thiruvananthapuram</option>
+    <option>Udaipur</option>
+    <option>Varanasi</option>
+    <option>Warangal</option>
+    <option>Xeldem (Goa)</option>
+    <option>Yamunanagar</option>
+    <option>Zunheboto</option>
+</optgroup>
+
+                      <optgroup label="International">
+    <option>Australia</option>
+    <option>Brazil</option>
+    <option>Canada</option>
+    <option>Denmark</option>
+    <option>Egypt</option>
+    <option>France</option>
+    <option>Germany</option>
+    <option>Hungary</option>
+    <option>India</option>
+    <option>Japan</option>
+    <option>Kenya</option>
+    <option>Luxembourg</option>
+    <option>Malaysia</option>
+    <option>New Zealand</option>
+    <option>Oman</option>
+    <option>Portugal</option>
+    <option>Qatar</option>
+    <option>Russia</option>
+    <option>Singapore</option>
+    <option>Turkey</option>
+    <option>United States</option>
+    <option>United Kingdom</option>
+    <option>Vietnam</option>
+    <option>Yemen</option>
+    <option>Zimbabwe</option>
+</optgroup>
+
+                    </select>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2">
-                <div class="main-form-submit">
-                  <button type="submit">Find Now</button>
+
+              <!-- Travel Type Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single type-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-text-paragraph"></i>
+                  </div>
+                  <div class="searchbox-input">
+                    <label for="activity-dropdown">Travel Type</label>
+                    <select class="defult-select-drowpown" id="activity-dropdown">
+                      <option value="international">International</option>
+                      <option value="domestic">Domestic</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Person Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single type-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-person-plus"></i>
+                  </div>
+                  <div class="searchbox-input">
+                    <label for="person-dropdown">Person</label>
+                    <select class="defult-select-drowpown" id="person-dropdown">
+                      <option selected value="0">01</option>
+                      <option value="1">02</option>
+                      <option value="2">03</option>
+                      <option value="3">04</option>
+                      <option value="4">05</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Date Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single date-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-capslock"></i>
+                  </div>
+                  <div class="searchbox-input date-picker-input">
+                    <label for="datepicker">When</label>
+                    <input placeholder="Select your date" type="text" name="checkIn" id="datepicker" class="calendar" />
+                  </div>
                 </div>
               </div>
             </div>
-          </form>
+          </div>
+
+          <!-- Find Now Button -->
+          <div class="col-lg-2">
+            <div class="main-form-submit">
+              <button type="submit">Find Now</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
+  </div>
+</div>
+<!-- search box end-->
+
+
+
     <!-- category start -->
     <div class="category-sidebar-wrapper">
   <div class="category-sidebar">
@@ -1763,164 +1849,115 @@
     </div>
 
     <!-- Testmonial  start  -->
-    <div class="testimonial-area testimonial-style-one mt-120">
-      <div class="testimonial-shape-group"></div>
-      <div class="container position-relative">
+ <div class="testimonial-area testimonial-style-one mt-120" style="background-image: url('assets/images/background-image.png'); background-size: cover; background-position: center;">
+    <div class="testimonial-shape-group"></div>
+    <div class="container position-relative">
         <div class="row align-items-center">
-          <div class="col-lg-8">
-            <div class="section-head-alpha">
-              <h2>What Our Clients Say About Paryatak guide</h2>
-              <p>
-                At Paryatak guide, we take pride in creating unforgettable travel
-                experiences. Here’s what our travelers have to say about their
-                journeys with us.
-              </p>
+            <div class="col-lg-8">
+                <div class="section-head-alpha">
+                    <h2>What Our Clients Say About Paryatak guide</h2>
+                    <p>
+                        At Paryatak guide, we take pride in creating unforgettable travel
+                        experiences. Here’s what our travelers have to say about their
+                        journeys with us.
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4">
-            <div
-              class="slider-arrows text-center d-lg-flex d-none justify-content-end mb-3"
-            >
-              <div
-                class="testi-prev custom-swiper-prev"
-                tabindex="0"
-                role="button"
-                aria-label="Previous slide"
-              >
-                <i class="bi bi-chevron-left"></i>
-              </div>
-              <div
-                class="testi-next custom-swiper-next"
-                tabindex="0"
-                role="button"
-                aria-label="Next slide"
-              >
-                <i class="bi bi-chevron-right"></i>
-              </div>
+            <div class="col-lg-4">
+                <div class="slider-arrows text-center d-lg-flex d-none justify-content-end mb-3">
+                    <div class="testi-prev custom-swiper-prev" tabindex="0" role="button" aria-label="Previous slide">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                    <div class="testi-next custom-swiper-next" tabindex="0" role="button" aria-label="Next slide">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <div class="swiper testimonial-slider-one position-relative">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-card testimonial-card-alpha">
-                <!-- <div class="testimonial-overlay-img">
-                            <img src="assets/images/reviewer/r-sm1.png" alt="Client Image">
-                        </div> -->
-                <div class="testimonial-card-top">
-                  <div class="qoute-icon">
-                    <i class="bx bxs-quote-left"></i>
-                  </div>
-                  <div class="testimonial-thumb">
-                    <img
-                      src="assets/images/reviewer/r-sm1.png"
-                      alt="Reviewer Image"
-                    />
-                  </div>
-                  <h3 class="testimonial-count">01</h3>
-                </div>
-                <div class="testimonial-body">
-                  <p>
-                    Paryatak guide planned everything. It was a stress-free
-                    experience from start to finish.
-                  </p>
-                  <div class="testimonial-bottom">
-                    <div class="reviewer-info">
-                      <h4 class="reviewer-name">Arjun Mehta</h4>
-                      <h6>Traveller</h6>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-card testimonial-card-alpha" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px;">
+                        <div class="testimonial-card-top">
+                            <img src="assets/images/pexels-dana-tentis-118658-365668.jpg" alt="Reviewer Image" style="width: 100%; height: auto; object-fit: cover;" />
+                        </div>
+                        <div class="testimonial-body">
+                            <p>
+                                Paryatak guide planned everything. It was a stress-free experience from start to finish.
+                            </p>
+                            <div class="testimonial-bottom">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Arjun Mehta</h4>
+                                    <h6 style="color: #000; font-weight: 200;">Traveller</h6>
+                                </div>
+                                <ul class="testimonial-rating">
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="testimonial-rating">
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card testimonial-card-alpha">
-                <!-- <div class="testimonial-overlay-img">
-                            <img src="assets/images/reviewer/reviewer-1.png" alt="Client Image">
-                        </div> -->
-                <div class="testimonial-card-top">
-                  <div class="qoute-icon">
-                    <i class="bx bxs-quote-left"></i>
-                  </div>
-                  <div class="testimonial-thumb">
-                    <img
-                      src="assets/images/reviewer/r-sm2.png"
-                      alt="Reviewer Image"
-                    />
-                  </div>
-                  <h3 class="testimonial-count">02</h3>
-                </div>
-                <div class="testimonial-body">
-                  <p>
-                    They understood our needs and curated a fantastic itinerary.
-                    Highly recommended!
-                  </p>
-                  <div class="testimonial-bottom">
-                    <div class="reviewer-info">
-                      <h4 class="reviewer-name">Priyansh Nair</h4>
-                      <h6>Traveller</h6>
-                    </div>
-                    <ul class="testimonial-rating">
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-card testimonial-card-alpha">
-                <!-- <div class="testimonial-overlay-img">
-                            <img src="assets/images/reviewer/reviewer-1.png" alt="Client Image">
-                        </div> -->
-                <div class="testimonial-card-top">
-                  <div class="qoute-icon">
-                    <i class="bx bxs-quote-left"></i>
-                  </div>
-                  <div class="testimonial-thumb">
-                    <img
-                      src="assets/images/reviewer/r-sm3.png"
-                      alt="Reviewer Image"
-                    />
-                  </div>
-                  <h3 class="testimonial-count">03</h3>
-                </div>
-                <div class="testimonial-body">
-                  <p>
-                    A seamless travel experience. Paryatak guide made our trip
-                    unforgettable.
-                  </p>
-                  <div class="testimonial-bottom">
-                    <div class="reviewer-info">
-                      <h4 class="reviewer-name">Priya Sharma</h4>
-                      <h6>Traveller</h6>
-                    </div>
-                    <ul class="testimonial-rating">
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                      <li><i class="bi bi-star-fill"></i></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
+                <div class="swiper-slide">
+                    <div class="testimonial-card testimonial-card-alpha" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px;">
+                        <div class="testimonial-card-top">
+                            <img src="assets/images/pexels-julia-volk-5193476.jpg" alt="Reviewer Image" style="width: 100%; height: auto; object-fit: cover;" />
+                        </div>
+                        <div class="testimonial-body">
+                            <p>
+                                They understood our needs and curated a fantastic itinerary. Highly recommended!
+                            </p>
+                            <div class="testimonial-bottom">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Priyansh Nair</h4>
+                                    <h6 style="color: #000; font-weight: 200;">Traveller</h6>
+                                </div>
+                                <ul class="testimonial-rating">
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="testimonial-card testimonial-card-alpha" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px;">
+                        <div class="testimonial-card-top">
+                            <img src="assets/images/pexels-luke-webb-1336561-2738173.jpg" alt="Reviewer Image" style="width: 100%; height: auto; object-fit: cover;" />
+                        </div>
+                        <div class="testimonial-body">
+                            <p>
+                                A seamless travel experience. Paryatak guide made our trip unforgettable.
+                            </p>
+                            <div class="testimonial-bottom">
+                                <div class="reviewer-info">
+                                    <h4 class="reviewer-name">Priya Sharma</h4>
+                                    <h6 style="color: #000; font-weight: 200;">Traveller</h6>
+                                </div>
+                                <ul class="testimonial-rating">
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star-fill"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Testmonial  end  -->
     <!-- guide start -->
     <div class="guide-area guide-style-one pt-110">
@@ -1945,7 +1982,11 @@
   <div class="guide-image">
     <img src="assets/images/istockphoto-168507706-612x612.jpg" alt="Guide Image" />
     <ul class="guide-social-links">
-      <li><a href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ==" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+<li>
+  <a href="https://www.instagram.com/paryatakguide/?igsh=MXdtOGNqdmExMGF2bQ%3D%3D" target="_blank">
+    <i class="bx bxl-instagram"></i>
+  </a>
+</li>
       <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
       <li><a href="https://www.youtube.com/@Paryatak.Club01" target="_blank"><i class="bx bxl-youtube"></i></a></li>
     </ul>
@@ -1972,8 +2013,11 @@
   <div class="guide-image">
     <img src="assets/images/istockphoto-649356542-612x612.jpg" alt="Guide Image" />
     <ul class="guide-social-links">
-      <li><a href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ==" target="_blank"><i class="bx bxl-instagram"></i></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+<li>
+  <a href="https://www.instagram.com/paryatakguide/?igsh=MXdtOGNqdmExMGF2bQ%3D%3D" target="_blank">
+    <i class="bx bxl-instagram"></i>
+  </a>
+</li>      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
       <li><a href="https://www.youtube.com/@Paryatak.Club01" target="_blank"><i class="bx bxl-youtube"></i></a></li>
     </ul>
   </div>
@@ -1999,8 +2043,11 @@
   <div class="guide-image">
     <img src="assets/images/istockphoto-485614909-612x612.jpg" alt="Guide Image" />
     <ul class="guide-social-links">
-      <li><a href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ==" target="_blank"><i class="bx bxl-instagram"></i></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+<li>
+  <a href="https://www.instagram.com/paryatakguide/?igsh=MXdtOGNqdmExMGF2bQ%3D%3D" target="_blank">
+    <i class="bx bxl-instagram"></i>
+  </a>
+</li>      <li><a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank"><i class="bx bxl-facebook"></i></a></li>
       <li><a href="https://www.youtube.com/@Paryatak.Club01" target="_blank"><i class="bx bxl-youtube"></i></a></li>
     </ul>
   </div>
@@ -2031,118 +2078,119 @@
     <!-- guide end -->
 
     <!-- blog start -->
-    <div class="blog-area blog-style-one pt-110">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-head-alpha text-center mx-auto">
-              <h2>Latest Travel Stories</h2>
-              <p>
-                Stay updated with the latest travel trends, tips, and stories
-                curated by our expert team at Paryatak.club. Discover your next
-                adventure with us.
-              </p>
+   <div class="blog-area blog-style-one pt-110">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-head-alpha text-center mx-auto">
+          <h2>Latest Travel Stories</h2>
+          <p>
+            Stay updated with the latest travel trends, tips, and stories
+            curated by our expert team at Paryatak guide. Discover your next
+            adventure with us.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card-alpha">
+          <div class="blog-thumb">
+            <a href="index.html">
+              <img
+                src="assets/images/indian pic/istockphoto-2154433338-612x612.jpg"
+                alt="Travel Blog Image 1"
+              />
+            </a>
+            <div class="blog-lavel">
+              <a href="#"
+                ><i class="bi bi-calendar3"></i> August 12, 2024</a
+              >
             </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-body-top">
+              <a href="#" class="blog-writer"
+                ><i class="bi bi-person-circle"></i> By Aditi Singh</a
+              >
+              <a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank" class="blog-comments"
+                ><i class="bi bi-chat-dots-fill"></i> Comment (12)</a
+              >
+            </div>
+            <h4 class="blog-title">
+              <a href="index.html"
+                >Exploring the Unseen Wonders of the Himalayas</a
+              >
+            </h4>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="blog-card-alpha">
-              <div class="blog-thumb">
-                <a href="index.html">
-                  <img
-                    src="assets/images/indian pic/istockphoto-2154433338-612x612.jpg"
-                    alt="Travel Blog Image 1"
-                  />
-                </a>
-                <div class="blog-lavel">
-                  <a href="#"
-                    ><i class="bi bi-calendar3"></i> August 12, 2024</a
-                  >
-                </div>
-              </div>
-              <div class="blog-content">
-                <div class="blog-body-top">
-                  <a href="#" class="blog-writer"
-                    ><i class="bi bi-person-circle"></i> By Aditi Singh</a
-                  >
-                  <a href="#" class="blog-comments"
-                    ><i class="bi bi-chat-dots-fill"></i> Comment (12)</a
-                  >
-                </div>
-                <h4 class="blog-title">
-                  <a href="index.html"
-                    >Exploring the Unseen Wonders of the Himalayas</a
-                  >
-                </h4>
-              </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card-alpha">
+          <div class="blog-thumb">
+            <a href="index.html">
+              <img
+                src="assets/images/indian pic/istockphoto-1031430214-612x612.jpg"
+                alt="Travel Blog Image 2"
+                height="200px"
+              />
+            </a>
+            <div class="blog-lavel">
+              <a href="#"
+                ><i class="bi bi-calendar3"></i> August 27, 2024</a
+              >
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="blog-card-alpha">
-              <div class="blog-thumb">
-                <a href="index.html">
-                  <img
-                    src="assets/images/indian pic/istockphoto-1031430214-612x612.jpg"
-                    alt="Travel Blog Image 2"
-                    height="200px"
-                  />
-                </a>
-                <div class="blog-lavel">
-                  <a href="#"
-                    ><i class="bi bi-calendar3"></i> August 10, 2024</a
-                  >
-                </div>
-              </div>
-              <div class="blog-content">
-                <div class="blog-body-top">
-                  <a href="#" class="blog-writer"
-                    ><i class="bi bi-person-circle"></i> By Raj Patel</a
-                  >
-                  <a href="#" class="blog-comments"
-                    ><i class="bi bi-chat-dots-fill"></i> Comment (08)</a
-                  >
-                </div>
-                <h4 class="blog-title">
-                  <a href="index.html"
-                    >Top 5 Beach Destinations in South India</a
-                  >
-                </h4>
-              </div>
+          <div class="blog-content">
+            <div class="blog-body-top">
+              <a href="#" class="blog-writer"
+                ><i class="bi bi-person-circle"></i> By Raj Patel</a
+              >
+              <a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank" class="blog-comments"
+                ><i class="bi bi-chat-dots-fill"></i> Comment (08)</a
+              >
+            </div>
+            <h4 class="blog-title">
+              <a href="index.html"
+                >Top 5 Beach Destinations in South India</a
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card-alpha">
+          <div class="blog-thumb">
+            <a href="index.html">
+              <img
+                src="assets/images/indian pic/istockphoto-2161510610-612x612.jpg"
+                alt="Travel Blog Image 3"
+                height="200px"
+              />
+            </a>
+            <div class="blog-lavel">
+              <a href="#"><i class="bi bi-calendar3"></i> September 11, 2024</a>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="blog-card-alpha">
-              <div class="blog-thumb">
-                <a href="index.html">
-                  <img
-                    src="assets/images/indian pic/istockphoto-2161510610-612x612.jpg"
-                    alt="Travel Blog Image 3"
-                    height="200px"
-                  />
-                </a>
-                <div class="blog-lavel">
-                  <a href="#"><i class="bi bi-calendar3"></i> August 8, 2024</a>
-                </div>
-              </div>
-              <div class="blog-content">
-                <div class="blog-body-top">
-                  <a href="#" class="blog-writer"
-                    ><i class="bi bi-person-circle"></i> By Neha Verma</a
-                  >
-                  <a href="#" class="blog-comments"
-                    ><i class="bi bi-chat-dots-fill"></i> Comment (10)</a
-                  >
-                </div>
-                <h4 class="blog-title">
-                  <a href="index.html">A Culinary Journey Through Rajasthan</a>
-                </h4>
-              </div>
+          <div class="blog-content">
+            <div class="blog-body-top">
+              <a href="#" class="blog-writer"
+                ><i class="bi bi-person-circle"></i> By Neha Verma</a
+              >
+              <a href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi" target="_blank" class="blog-comments"
+                ><i class="bi bi-chat-dots-fill"></i> Comment (10)</a
+              >
             </div>
+            <h4 class="blog-title">
+              <a href="index.html">A Culinary Journey Through Rajasthan</a>
+            </h4>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
 
     <!-- blog end -->
 
@@ -2159,7 +2207,7 @@
             <div class="col-lg-4">
               <div class="footer-about text-lg-start text-center">
                 <p>
-                  Explore the world with Paryatak.club, where every journey is
+                  Explore the world with Paryatak guide, where every journey is
                   crafted with care. Discover unique destinations and create
                   unforgettable memories.
                 </p>
@@ -2169,13 +2217,11 @@
                   <ul
                     class="footer-social-links justify-content-lg-start justify-content-center"
                   >
-                    <li>
-                      <a
-                        href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
-                        target="_blank"
-                        ><i class="bx bxl-instagram"></i
-                      ></a>
-                    </li>
+                   <li>
+  <a href="https://www.instagram.com/paryatakguide/?igsh=MXdtOGNqdmExMGF2bQ%3D%3D" target="_blank">
+    <i class="bx bxl-instagram"></i>
+  </a>
+</li>
                     <!-- <li><a href="#"><i class="bx bxl-facebook"></i></a></li> -->
                     <li>
                       <a
@@ -2283,32 +2329,44 @@
               </div>
             </div>
           </div>
-          <div class="footer-contact-wrapper">
-            <h5>Contact Us:</h5>
-            <ul class="footer-contact-list">
-              <li>
-                <i class="bi bi-telephone-x"></i>
-                <a href="tel:+17632275032">+91 9555695021</a>
-              </li>
-              <li>
-                <i class="bi bi-envelope-open"></i>
-                <a
-                  href="https://demo.egenslab.com/cdn-cgi/l/email-protection#d3babdb5bc93a7bca6a1aba3a1bcfdb0bcbe"
-                  ><span
-                    class="__cf_email__"
-                    data-cfemail="c9a0a7afa689bda6bcbbb1b9bba6e7aaa6a4"
-                    >bookingparyatak@gmail.com</span
-                  ></a
-                >
-              </li>
-              <li>
-                <i class="bi bi-geo-alt"></i>
-                <a href="contact.html"
-                  >Karanda, Karanda Ghazipur - Uttar Pradesh - India (233224)</a
-                >
-              </li>
-            </ul>
-          </div>
+         <div class="footer-contact-wrapper">
+  <!-- Contact Us Section -->
+  <ul class="footer-contact-list" style="list-style: none; padding: 0;">
+    <!-- Phone Number -->
+    <li style="margin-bottom: 10px;">
+      <i class="bi bi-telephone-x"></i>
+      <span>Contact Us:</span>
+      <br>
+      <a href="tel:+919555695021">+91 9555695021</a>
+    </li>
+  </ul>
+
+  <!-- Email Us Section -->
+  <ul class="footer-contact-list" style="list-style: none; padding: 0;">
+    <li style="text-align: center; margin-bottom: 10px;">
+      <i class="bi bi-envelope-open"></i>
+      <span>Email:</span>
+      <br>
+      <a href="mailto:bookingparyatak@gmail.com">bookingparyatak@gmail.com</a>
+      <br>
+      <a href="mailto:paryatakinfo@gmail.com">paryatakinfo@gmail.com</a>
+    </li>
+  </ul>
+
+  <!-- Address Section -->
+  <ul class="footer-contact-list" style="list-style: none; padding: 0;">
+    <li style="margin-bottom: 10px;">
+      <i class="bi bi-geo-alt"></i>
+      <span style="margin-left: 65px;">Address:</span>
+      <br>
+      <a href="contact.html">
+        Karanda, Karanda Ghazipur - <br>
+        Uttar Pradesh - India (233224)
+      </a>
+    </li>
+  </ul>
+</div>
+
         </div>
       </div>
       <div class="footer-bottom">
@@ -2382,6 +2440,33 @@
     <script src="assets/js/jquery-ui.js"></script>
 
     <script src="assets/js/main.js"></script>
+    
+    
+<script>
+  function sendEmail(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the selected values from the form
+    var destination = document.getElementById('deatination_drop').value;
+    var travelType = document.getElementById('activity-dropdown').value;
+    var person = document.getElementById('person-dropdown').value;
+    var date = document.getElementById('datepicker').value;
+
+    // Construct the mailto URL with form data
+    var mailtoLink = 'mailto:sadhnakumari55555@gmail.com'
+                   + '?subject=Travel Inquiry'
+                   + '&body=Destination: ' + destination
+                   + '%0D%0ATravel Type: ' + travelType
+                   + '%0D%0APersons: ' + person
+                   + '%0D%0ADate: ' + date;
+
+    // Open the email client with the populated mailto link
+    window.location.href = mailtoLink;
+  }
+</script>
+
+
+
   </body>
 
 </html>

@@ -75,115 +75,154 @@
 </div>
 </div> -->
 
-    <div class="main-searchbar-wrapper">
-      <div class="container">
-        <div class="multi-main-searchber">
-          <div class="main-searchbar-close search-toggle">
-            <i class="bi bi-x-lg"></i>
-          </div>
-          <form action="#" method="post" id="main_searchbar">
-            <div class="row g-4">
-              <div class="col-lg-10">
-                <div class="row gx-0 gy-4">
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single destination-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-geo-alt"></i>
-                      </div>
-                      <div class="searchbox-input">
-                        <label for="deatination_drop">Destination</label>
-                        <select
-                          data-placeholder="Where Are You Going?"
-                          id="deatination_drop"
-                        >
-                          <option value>Where Are You Going?</option>
-                          <optgroup label="India">
-                            <option>Solt Lake</option>
-                            <option>Kolkata</option>
-                            <option>Mohamia</option>
-                            <option>Mumbai</option>
-                            <option>New Delhi</option>
-                          </optgroup>
-                          <optgroup label=" Bangladash">
-                            <option>Cox's Bazer</option>
-                            <option>Rangamati</option>
-                            <option>Banderban</option>
-                          </optgroup>
-                        </select>
-                      </div>
-                    </div>
+
+<!-- search box start-->
+<div class="main-searchbar-wrapper">
+  <div class="container">
+    <div class="multi-main-searchber">
+      <div class="main-searchbar-close search-toggle">
+        <i class="bi bi-x-lg"></i>
+      </div>
+      <form id="main_searchbar" onsubmit="sendEmail(event)">
+        <div class="row g-4">
+          <div class="col-lg-10">
+            <div class="row gx-0 gy-4">
+              <!-- Destination Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single destination-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-geo-alt"></i>
                   </div>
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single type-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-text-paragraph"></i>
-                      </div>
-                      <div class="searchbox-input">
-                        <label for="activity-dropdown">Travel Type</label>
-                        <select
-                          class="defult-select-drowpown"
-                          data-placeholder="All Activity"
-                          id="activity-dropdown"
-                        >
-                          <option value>All Activity</option>
-                          <option value="1">Type 1</option>
-                          <option value="2">Type 2</option>
-                          <option value="3">Type 3</option>
-                          <option value="4">Type 4</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single type-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-person-plus"></i>
-                      </div>
-                      <div class="searchbox-input">
-                        <label for="person-dropdown">Person</label>
-                        <select
-                          class="defult-select-drowpown"
-                          id="person-dropdown"
-                        >
-                          <option selected value="0">01</option>
-                          <option value="1">02</option>
-                          <option value="2">03</option>
-                          <option value="3">04</option>
-                          <option value="4">05</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                    <div class="search-box-single date-box">
-                      <div class="searchbox-icon">
-                        <i class="bi bi-capslock"></i>
-                      </div>
-                      <div class="searchbox-input date-picker-input">
-                        <label for="datepicker">When</label>
-                        <input
-                          placeholder="Select your date"
-                          type="text"
-                          name="checkIn"
-                          id="datepicker"
-                          value
-                          class="calendar"
-                        />
-                      </div>
-                    </div>
+                  <div class="searchbox-input">
+                    <label for="deatination_drop">Destination</label>
+                    <select data-placeholder="Where Are You Going?" id="deatination_drop">
+                      <option value>Where Are You Going?</option>
+                      <optgroup label="India">
+    <option>Agra</option>
+    <option>Ahmedabad</option>
+    <option>Bangalore</option>
+    <option>Chennai</option>
+    <option>Delhi</option>
+    <option>Erode</option>
+    <option>Faridabad</option>
+    <option>Guwahati</option>
+    <option>Hyderabad</option>
+    <option>Indore</option>
+    <option>Jaipur</option>
+    <option>Kolkata</option>
+    <option>Lucknow</option>
+    <option>Mumbai</option>
+    <option>Nagpur</option>
+    <option>Ooty</option>
+    <option>Patna</option>
+    <option>Quilon (Kollam)</option>
+    <option>Ranchi</option>
+    <option>Surat</option>
+    <option>Thiruvananthapuram</option>
+    <option>Udaipur</option>
+    <option>Varanasi</option>
+    <option>Warangal</option>
+    <option>Xeldem (Goa)</option>
+    <option>Yamunanagar</option>
+    <option>Zunheboto</option>
+</optgroup>
+
+                      <optgroup label="International">
+    <option>Australia</option>
+    <option>Brazil</option>
+    <option>Canada</option>
+    <option>Denmark</option>
+    <option>Egypt</option>
+    <option>France</option>
+    <option>Germany</option>
+    <option>Hungary</option>
+    <option>India</option>
+    <option>Japan</option>
+    <option>Kenya</option>
+    <option>Luxembourg</option>
+    <option>Malaysia</option>
+    <option>New Zealand</option>
+    <option>Oman</option>
+    <option>Portugal</option>
+    <option>Qatar</option>
+    <option>Russia</option>
+    <option>Singapore</option>
+    <option>Turkey</option>
+    <option>United States</option>
+    <option>United Kingdom</option>
+    <option>Vietnam</option>
+    <option>Yemen</option>
+    <option>Zimbabwe</option>
+</optgroup>
+
+                    </select>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2">
-                <div class="main-form-submit">
-                  <button type="submit">Find Now</button>
+
+              <!-- Travel Type Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single type-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-text-paragraph"></i>
+                  </div>
+                  <div class="searchbox-input">
+                    <label for="activity-dropdown">Travel Type</label>
+                    <select class="defult-select-drowpown" id="activity-dropdown">
+                      <option value="international">International</option>
+                      <option value="domestic">Domestic</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Person Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single type-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-person-plus"></i>
+                  </div>
+                  <div class="searchbox-input">
+                    <label for="person-dropdown">Person</label>
+                    <select class="defult-select-drowpown" id="person-dropdown">
+                      <option selected value="0">01</option>
+                      <option value="1">02</option>
+                      <option value="2">03</option>
+                      <option value="3">04</option>
+                      <option value="4">05</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Date Section -->
+              <div class="col-lg-3 col-md-6">
+                <div class="search-box-single date-box">
+                  <div class="searchbox-icon">
+                    <i class="bi bi-capslock"></i>
+                  </div>
+                  <div class="searchbox-input date-picker-input">
+                    <label for="datepicker">When</label>
+                    <input placeholder="Select your date" type="text" name="checkIn" id="datepicker" class="calendar" />
+                  </div>
                 </div>
               </div>
             </div>
-          </form>
+          </div>
+
+          <!-- Find Now Button -->
+          <div class="col-lg-2">
+            <div class="main-form-submit">
+              <button type="submit">Find Now</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
+  </div>
+</div>
+<!-- search box end-->
+
     <!-- category start -->
     <div class="category-sidebar-wrapper">
   <div class="category-sidebar">
@@ -561,6 +600,7 @@
       </div>
     </div>
 
+    
     <!-- Footer  start-->
     <div class="footer-area mt-110">
       <div class="footer-main-wrapper">
@@ -582,13 +622,11 @@
                   <ul
                     class="footer-social-links justify-content-lg-start justify-content-center"
                   >
-                    <li>
-                      <a
-                        href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
-                        target="_blank"
-                        ><i class="bx bxl-instagram"></i
-                      ></a>
-                    </li>
+                   <li>
+  <a href="https://www.instagram.com/paryatakguide/?igsh=MXdtOGNqdmExMGF2bQ%3D%3D" target="_blank">
+    <i class="bx bxl-instagram"></i>
+  </a>
+</li>
                     <!-- <li><a href="#"><i class="bx bxl-facebook"></i></a></li> -->
                     <li>
                       <a
@@ -696,32 +734,44 @@
               </div>
             </div>
           </div>
-          <div class="footer-contact-wrapper">
-            <h5>Contact Us:</h5>
-            <ul class="footer-contact-list">
-              <li>
-                <i class="bi bi-telephone-x"></i>
-                <a href="tel:+17632275032">+91 9555695021</a>
-              </li>
-              <li>
-                <i class="bi bi-envelope-open"></i>
-                <a
-                  href="https://demo.egenslab.com/cdn-cgi/l/email-protection#d3babdb5bc93a7bca6a1aba3a1bcfdb0bcbe"
-                  ><span
-                    class="__cf_email__"
-                    data-cfemail="c9a0a7afa689bda6bcbbb1b9bba6e7aaa6a4"
-                    >bookingparyatak@gmail.com</span
-                  ></a
-                >
-              </li>
-              <li>
-                <i class="bi bi-geo-alt"></i>
-                <a href="contact.html"
-                  >Karanda, Karanda Ghazipur - Uttar Pradesh - India (233224)</a
-                >
-              </li>
-            </ul>
-          </div>
+         <div class="footer-contact-wrapper">
+  <!-- Contact Us Section -->
+  <ul class="footer-contact-list" style="list-style: none; padding: 0;">
+    <!-- Phone Number -->
+    <li style="margin-bottom: 10px;">
+      <i class="bi bi-telephone-x"></i>
+      <span>Contact Us:</span>
+      <br>
+      <a href="tel:+919555695021">+91 9555695021</a>
+    </li>
+  </ul>
+
+  <!-- Email Us Section -->
+  <ul class="footer-contact-list" style="list-style: none; padding: 0;">
+    <li style="text-align: center; margin-bottom: 10px;">
+      <i class="bi bi-envelope-open"></i>
+      <span>Email:</span>
+      <br>
+      <a href="mailto:bookingparyatak@gmail.com">bookingparyatak@gmail.com</a>
+      <br>
+      <a href="mailto:paryatakinfo@gmail.com">paryatakinfo@gmail.com</a>
+    </li>
+  </ul>
+
+  <!-- Address Section -->
+  <ul class="footer-contact-list" style="list-style: none; padding: 0;">
+    <li style="margin-bottom: 10px;">
+      <i class="bi bi-geo-alt"></i>
+      <span style="margin-left: 65px;">Address:</span>
+      <br>
+      <a href="contact.html">
+        Karanda, Karanda Ghazipur - <br>
+        Uttar Pradesh - India (233224)
+      </a>
+    </li>
+  </ul>
+</div>
+
         </div>
       </div>
       <div class="footer-bottom">
@@ -729,18 +779,16 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-4 col-md-6 order-lg-1 order-3">
               <div class="copyright-link text-lg-start text-center">
-                <p>
-                  Copyright 2024 | Design By <a href="#"> paryatak guide</a>
-                </p>
+                <p>Copyright 2024 | Design By <a href="#"> paryatak guide</a></p>
               </div>
             </div>
             <div class="col-lg-4 order-lg-2 order-1">
               <div class="footer-logo text-center">
                 <a href="index.html"
                   ><img
-                    src="assets/images/Photo_1726161078385.png"
+                    src="assets/images/Photo_1726161078385 (1).png"
                     alt
-                    height="140px"
+                    height="120px"
                 /></a>
               </div>
             </div>
@@ -775,5 +823,30 @@
     <script src="assets/js/jquery-ui.js"></script>
 
     <script src="assets/js/main.js"></script>
+        
+<script>
+  function sendEmail(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the selected values from the form
+    var destination = document.getElementById('deatination_drop').value;
+    var travelType = document.getElementById('activity-dropdown').value;
+    var person = document.getElementById('person-dropdown').value;
+    var date = document.getElementById('datepicker').value;
+
+    // Construct the mailto URL with form data
+    var mailtoLink = 'mailto:sadhnakumari55555@gmail.com'
+                   + '?subject=Travel Inquiry'
+                   + '&body=Destination: ' + destination
+                   + '%0D%0ATravel Type: ' + travelType
+                   + '%0D%0APersons: ' + person
+                   + '%0D%0ADate: ' + date;
+
+    // Open the email client with the populated mailto link
+    window.location.href = mailtoLink;
+  }
+</script>
+
+
   </body>
 </html>
