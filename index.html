@@ -26,11 +26,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
     <link rel="stylesheet" href="assets/css/animate.min.css" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
     <style>
       /* For desktop view */
       .logo {
@@ -146,62 +149,101 @@
                     <select data-placeholder="Where Are You Going?" id="deatination_drop">
                       <option value>Where Are You Going?</option>
                       <optgroup label="India">
-    <option>Agra</option>
-    <option>Ahmedabad</option>
-    <option>Bangalore</option>
-    <option>Chennai</option>
-    <option>Delhi</option>
-    <option>Erode</option>
-    <option>Faridabad</option>
-    <option>Guwahati</option>
-    <option>Hyderabad</option>
-    <option>Indore</option>
-    <option>Jaipur</option>
-    <option>Kolkata</option>
-    <option>Lucknow</option>
-    <option>Mumbai</option>
-    <option>Nagpur</option>
-    <option>Ooty</option>
-    <option>Patna</option>
-    <option>Quilon (Kollam)</option>
-    <option>Ranchi</option>
-    <option>Surat</option>
-    <option>Thiruvananthapuram</option>
-    <option>Udaipur</option>
-    <option>Varanasi</option>
-    <option>Warangal</option>
-    <option>Xeldem (Goa)</option>
-    <option>Yamunanagar</option>
-    <option>Zunheboto</option>
-</optgroup>
+                        <option>Agra</option>
+<option>Amritsar</option>
+<option>Auli</option>
+<option>Bhilai</option>
+<option>Bilaspur</option>
+<option>Bhopal</option>
+<option>Chittorgarh</option>
+<option>Chitrakoot</option>
+<option>Corbett</option>
+<option>Daman</option>
+<option>Dewas</option>
+<option>Durg</option>
+<option>Gir Forest</option>
+<option>Goa</option>
+<option>Gwalior</option>
+<option>Indore</option>
+<option>Jabalpur</option>
+<option>Jagdalpur</option>
+<option>Jaipur</option>
+<option>Kanyakumari</option>
+<option>Khajuraho</option>
+<option>Leh Ladakh</option>
+<option>Manali</option>
+<option>Mandu</option>
+<option>Matheran</option>
+<option>Mussoorie</option>
+<option>Mukteshwar</option>
+<option>Munnar</option>
+<option>Nainital</option>
+<option>Narsinghpur</option>
+<option>Ooty</option>
+<option>Pachmarhi</option>
+<option>Panchgani</option>
+<option>Raipur</option>
+<option>Ranikhet</option>
+<option>Ratnagiri</option>
+<option>Resor</option>
+<option>Shirdi</option>
+<option>Shimla</option>
+<option>Shivalaya</option>
+<option>Shri Lanka</option>
+<option>Udaipur</option>
+<option>Visakhapatnam</option>
+<option>Waynard</option>
+<option>Yercaud</option>
 
-                      <optgroup label="International">
-    <option>Australia</option>
-    <option>Brazil</option>
-    <option>Canada</option>
-    <option>Denmark</option>
-    <option>Egypt</option>
-    <option>France</option>
-    <option>Germany</option>
-    <option>Hungary</option>
-    <option>India</option>
-    <option>Japan</option>
-    <option>Kenya</option>
-    <option>Luxembourg</option>
-    <option>Malaysia</option>
-    <option>New Zealand</option>
-    <option>Oman</option>
-    <option>Portugal</option>
-    <option>Qatar</option>
-    <option>Russia</option>
-    <option>Singapore</option>
-    <option>Turkey</option>
-    <option>United States</option>
-    <option>United Kingdom</option>
-    <option>Vietnam</option>
-    <option>Yemen</option>
-    <option>Zimbabwe</option>
-</optgroup>
+                      </optgroup>
+
+
+                                           <optgroup label="International">
+                                            <option>Amsterdam</option>
+<option>Antalya</option>
+<option>Athens</option>
+<option>Bangkok</option>
+<option>Barcelona</option>
+<option>Bali</option>
+<option>Beijing</option>
+<option>Berlin</option>
+<option>Budapest</option>
+<option>Cairns</option>
+<option>Dubai</option>
+<option>Florence</option>
+<option>Frankfurt</option>
+<option>Gold Coast</option>
+<option>Guangzhou</option>
+<option>Hong Kong</option>
+<option>Innsbruck</option>
+<option>Interlaken</option>
+<option>Istanbul</option>
+<option>Jakarta</option>
+<option>Koh Samui</option>
+<option>Krabi</option>
+<option>Kuala Lumpur</option>
+<option>Kyoto</option>
+<option>Langkawi</option>
+<option>Lucerne</option>
+<option>Macau</option>
+<option>Madrid</option>
+<option>Miyako</option>
+<option>Perth</option>
+<option>Phuket</option>
+<option>Pattaya</option>
+<option>Santorini</option>
+<option>Singapore</option>
+<option>Shri Lanka</option>
+<option>Sydney</option>
+<option>Tokyo</option>
+<option>Toronto</option>
+<option>Venice</option>
+<option>Vienna</option>
+<option>Zurich</option>
+
+                                           </optgroup>
+
+
 
                     </select>
                   </div>
@@ -210,19 +252,22 @@
 
               <!-- Travel Type Section -->
               <div class="col-lg-3 col-md-6">
-                <div class="search-box-single type-box">
-                  <div class="searchbox-icon">
-                    <i class="bi bi-text-paragraph"></i>
-                  </div>
-                  <div class="searchbox-input">
-                    <label for="activity-dropdown">Travel Type</label>
-                    <select class="defult-select-drowpown" id="activity-dropdown">
-                      <option value="international">International</option>
-                      <option value="domestic">Domestic</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+  <div class="search-box-single type-box">
+    <div class="searchbox-icon">
+      <i class="bi bi-text-paragraph"></i>
+    </div>
+    <div class="searchbox-input">
+      <label for="activity-dropdown">Travel Type</label>
+      <select class="defult-select-drowpown" id="activity-dropdown">
+        <option value="honeymoon">Honeymoon Package Trip</option>
+        <option value="family-holiday">Family Holiday Trip</option>
+        <option value="group-holiday">Group Holiday Trip</option>
+        <option value="business-trip">Business Trip</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 
               <!-- Person Section -->
               <div class="col-lg-3 col-md-6">
@@ -238,6 +283,12 @@
                       <option value="2">03</option>
                       <option value="3">04</option>
                       <option value="4">05</option>
+                      <option value="5">06</option>
+                      <option value="6">07</option>
+                      <option value="7">08</option>
+                      <option value="8">09</option>
+                      <option value="9">10</option>
+
                     </select>
                   </div>
                 </div>
@@ -752,280 +803,324 @@
     <div class="package-wrapper pt-80 pb-80">
       <div class="container">
         <div class="row gy-4">
-          <!-- Saffron Membership start -->
-          <div class="col-lg-4 col-md-6">
-            <div class="package-card-alpha h-100 p-3">
-              <div class="package-thumb mb-3">
-                <a href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20k
-                now%20more%20about%20your%20services.">
-                  <img
-                    src="assets/images/international/pexels-photo-1619854 (1).jpeg"
-                    alt="Saffron Membership"
-                    class="img-fluid rounded"
-                    style="height: 250px"
-                  />
-                </a>
-              </div>
+          
+<!-- Saffron Membership start -->
+<div class="col-lg-4 col-md-6">
+  <div class="package-card-alpha h-100 p-3">
 
-              <div class="package-card-body">
-                <h3 class="p-card-title text-center mb-3">
-                  <a href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20k
-                now%20more%20about%20your%20services.">Saffron Membership (SM)</a>
-                </h3>
-                <div
-                  class="p-card-bottom d-flex justify-content-between align-items-center mb-3"
-                >
-                  <div class="p-card-info text-start">
-                    <span>From</span>
-                    <h6 class="mb-0" style="font-size: 14px">
-                      ₹ 2,12,400 /-<br />
-                      <small>For 2 adults & 4 kids</small>
-                    </h6>
-                  </div>
-                  <div class="book-btn" style="text-align: right">
-                    <a href="booknow.html" class="btn btn-primary btn-sm">
-                      Book Now <i class="bx bxs-right-arrow-alt"></i>
-                    </a>
-                  </div>
-                </div>
+        <!-- Membership Title with Logo -->
+<div class="d-flex align-items-center mb-3">
+  <!-- Logo on the left side -->
+  <img
+    src="assets/images/Photo_1726161078385.png" 
+    alt="SSM Logo"
+    class="img-fluid"
+    style="height: 70px; margin-right: 15px;" />
+  
+  <!-- Title shifted slightly to the left -->
+  <h3 class="p-card-title mb-0" style="text-align: left;">
+    Saffron Sightseeing Membership (SSM)
+  </h3>
+</div>
 
-                <div class="package-details">
-                  <h4 class="mb-2">Membership Highlights</h4>
-                  <ul class="list-unstyled mb-3">
-                    <li>
-                      <strong>Every 1 year Dream location</strong>
-                    </li>
-                    <li>25 Domestic Sightseeing Locations in India</li>
-                    <li>1 Singapore Sightseeing Location</li>
-                    <li>10,000 sightseeing places and palaces</li>
-                    <li>Luxurious service and outdoor activity vouchers</li>
-                    <li>
-                      Number of family members covered:
-                      <ul>
-                        <li>2 Adults + 2 Kids</li>
-                        <li>4 Adults + 6 Kids</li>
-                      </ul>
-                    </li>
-                  </ul>
 
-                  <h4 class="mb-2">AMC Details</h4>
-                  <p class="mb-3">
-                    <strong>Annual Maintenance Cost (AMC): ₹12,500/-</strong>
-                  </p>
+    
+    <!-- Package Image -->
+    <div class="package-thumb mb-3">
+      <!-- <a href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."> -->
+        <img
+          src="assets/images/international/pexels-photo-1619854 (1).jpeg"
+          alt="Saffron Membership"
+          class="img-fluid rounded"
+          style="height: 250px"
+        />
+      </a>
+    </div>
 
-                  <!-- Read More Section -->
-                  <div id="more-info-sm" style="display: none">
-                    <h4 class="mb-2">Benefits and Rights</h4>
-                    <ul class="list-unstyled mb-3">
-                      <li>1. Save 3 years</li>
-                      <li>2. Gift only to blood relations</li>
-                      <li>3. Split location by location</li>
-                      <li>4. Use 24x7 = 365 days</li>
-                      <li>5. Advance 3 years' membership</li>
-                      <li>6. 3 location sightseeing (every year)</li>
-                      <li>7. Transfer (Anywhere, Anytime)</li>
-                      <li>8. Rent out to friends circle</li>
-                    </ul>
 
-                    <h4 class="mb-2">Free Offers</h4>
-                    <ul class="list-unstyled mb-3">
-                      <li>50-minute sightseeing film</li>
-                      <li>100-photo sightseeing memories album</li>
-                    </ul>
-                  </div>
+    <!-- Membership Price and Booking Button -->
+    <div class="p-card-bottom d-flex justify-content-between align-items-center mb-3">
+      <div class="p-card-info text-start">
+        <span>From</span>
+        <h6 class="mb-0" style="font-size: 14px">
+          ₹ 2,12,400 /-<br />
+          <small>For 2 adults & 4 kids</small>
+        </h6>
+      </div>
+<div class="book-btn" style="text-align: right;">
+  <a href="booknow.html" 
+     class="btn btn-primary btn-sm" 
+     style="background-color: orange; border-color: orange;">
+    Book Now <i class="bx bxs-right-arrow-alt"></i>
+  </a>
+</div>
 
-                  <!-- Read More Button -->
-                  <a
-                    href="javascript:void(0);"
-                    class="text-primary read-more-btn"
-                    data-target="more-info-sm"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Saffron Membership end -->
+    </div>
 
-          <!--  Green Membership (GM) start -->
-          <div class="col-lg-4 col-md-6">
-            <div class="package-card-alpha h-100 p-3">
-              <div class="package-thumb mb-3">
-                <a href="booknow.html">
-                  <img
-                    src="assets/images/international/pexels-photo-1842332.jpeg"
-                    alt="Green Membership"
-                    class="img-fluid rounded"
-                    style="height: 250px"
-                  />
-                </a>
-              </div>
+    <!-- Membership Highlights -->
+    <div class="package-details">
+      <h4 class="mb-2">Membership Highlights</h4>
+      <ul class="list-unstyled mb-3">
+            <li><i class="bx bx-calendar" style="color: #f4b400;"></i> Validity: 10 years</li> <!-- Added item -->
+            <li><i class="bx bx-location-plus" style="color: #f4b400;"></i> Sightseeing places: 15 destinations (India)</li>
 
-              <div class="package-card-body">
-                <h3 class="p-card-title text-center mb-3">
-                  <a href="booknow.html">Green Membership (GM)</a>
-                </h3>
-                <div
-                  class="p-card-bottom d-flex justify-content-between align-items-center mb-3"
-                >
-                  <div class="p-card-info text-start text-start">
-                    <span>From</span>
-                    <h6 class="mb-0" style="font-size: 14px">
-                      ₹ 1,00,786 /-<br />
-                      <small>For 3 adults & 4 kids</small>
-                    </h6>
-                  </div>
-                  <div class="book-btn">
-                    <a href="booknow.html" class="btn btn-primary btn-sm">
-                      Book Now <i class="bx bxs-right-arrow-alt"></i>
-                    </a>
-                  </div>
-                </div>
+        <li><i class="bx bx-map-pin" style="color: #f4b400;"></i> Sightseeing at 500+ Domestic & International Destinations</li>
+        <li><i class="bx bx-camera" style="color: #f4b400;"></i> Diverse indoor and outdoor activities</li>
+<li><i class="bx bx-wallet" style="color: #f4b400;"></i> ₹10,000 + discount on international flights</li>
+<li><i class="bx bx-film" style="color: #f4b400;"></i> Free movie tickets, flight assistance, attractive holiday packages, and other vouchers for our members</li>
+<li><i class="bx bx-car" style="color: #f4b400;"></i> Smooth pickup & drop facilities at no additional cost (total free)</li>
+<li><i class="bx bx-restaurant" style="color: #f4b400;"></i> Mouth-watering cuisine at no additional cost (total free)</li>
+      </ul>
 
-                <div class="package-details">
-                  <h4 class="mb-2">Membership Highlights</h4>
-                  <ul class="list-unstyled mb-3">
-                    <li>
-                      <strong>Every 1 year Dream location</strong>
-                    </li>
-                    <li>15 Domestic Sightseeing Locations in India</li>
-                    <li>Location sightseeing India + Singapore</li>
-                    <li>10,000 sightseeing places and palaces</li>
-                    <li>Luxurious service and outdoor activity vouchers</li>
-                    <li>
-                      Number of family members covered:
-                      <ul>
-                        <li>3 Adults + 4 Kids</li>
-                      </ul>
-                    </li>
-                  </ul>
+      <!-- AMC Details -->
+      <h4 class="mb-2">AMC Details</h4>
+      <p class="mb-3">
+        <strong>Annual Maintenance Cost (AMC): ₹12,500/- including GST</strong>
+      </p>
 
-                  <h4 class="mb-2">AMC Details</h4>
-                  <p class="mb-3">
-                    <strong>Annual Maintenance Cost (AMC): ₹12,500/-</strong>
-                  </p>
+      <!-- Benefits and Rights Section (Read More) -->
+      <div id="more-info-sm" style="display: none;">
+        <h4 class="mb-2">Benefits and Rights</h4>
+        <ul class="list-unstyled mb-3">
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Save for only 3 years</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Gift to only blood relatives</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can be divided according to location</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can be used 24x7 = 365 days (except festivals)</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can go for sightseeing only three times in a year</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can do sightseeing for three years in advance in a year</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Transfer to other part (Anywhere, Anytime)</li>
+        </ul>
 
-                  <!-- Read More Section -->
-                  <div id="more-info-gm" style="display: none">
-                    <h4 class="mb-2">Benefits and Rights</h4>
-                    <ul class="list-unstyled mb-3">
-                      <li>1. Save 3 years</li>
-                      <li>2. Gift only to blood relations</li>
-                      <li>3. Split location by location</li>
-                      <li>4. Use 24x7 = 365 days</li>
-                      <li>5. Advance 3 years' membership</li>
-                      <li>6. 3 location sightseeing (every year)</li>
-                      <li>7. Transfer (Anywhere, Anytime)</li>
-                      <li>8. Rent out to friends circle</li>
-                    </ul>
+        <!-- Special Offers -->
+        <h4 class="mb-2">Full Payment : Special Offers</h4>
+        <ul class="list-unstyled mb-3">
+          <li><i class="bx bx-film" style="color: #f4b400;"></i> 50-minute sightseeing film</li>
+          <li><i class="bx bx-camera" style="color: #f4b400;"></i> 100-photo sightseeing memories album</li>
+          <li><i class="bx bx-hotel" style="color: #f4b400;"></i> Accommodation in (Hotel or Resort)</li>
+        </ul>
+      </div>
 
-                    <h4 class="mb-2">Free Offers</h4>
-                    <ul class="list-unstyled mb-3">
-                      <li>50-minute sightseeing film</li>
-                      <li>100-photo sightseeing memories album</li>
-                    </ul>
-                  </div>
+      <!-- Read More Button -->
+      <a href="javascript:void(0);" class="text-primary read-more-btn" style="color: #f4b400; text-decoration: none;" data-target="more-info-sm">
+        Read More
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Saffron Membership end -->
 
-                  <!-- Read More Button -->
-                  <a
-                    href="javascript:void(0);"
-                    class="text-primary read-more-btn"
-                    data-target="more-info-gm"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          
+<!-- green Membership start -->
+<div class="col-lg-4 col-md-6">
+  <div class="package-card-alpha h-100 p-3">
 
-          <!-- Green Membership (GM) end -->
+        <!-- Membership Title with Logo -->
+<div class="d-flex align-items-center mb-3">
+  <!-- Logo on the left side -->
+  <img
+    src="assets/images/Photo_1726161078385.png" 
+    alt="SSM Logo"
+    class="img-fluid"
+    style="height: 70px; margin-right: 15px;" />
+  
+  <!-- Title shifted slightly to the left -->
+  <h3 class="p-card-title mb-0" style="text-align: left;">
+Green Sightseeing Membership (GSM)  </h3>
+</div>
 
-          <!-- Raja Rani Membership start -->
-          <div class="col-lg-4 col-md-6">
-            <div class="package-card-alpha h-100 p-3">
-              <div class="package-thumb mb-3">
-                <a href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20k
-                now%20more%20about%20your%20services.">
-                  <img
-                    src="assets/images/indian pic/city-palace-3229617_640.jpg"
-                    alt="Raja Rani Membership"
-                    class="img-fluid rounded"
-                    style="height: 250px"
-                  />
-                </a>
-              </div>
-              <div class="package-card-body">
-                <h3 class="p-card-title text-center mb-3">
-                  <a href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20k
-                now%20more%20about%20your%20services.">Raja Rani Membership (RRM)</a>
-                </h3>
-                <div
-                  class="p-card-bottom d-flex justify-content-between align-items-center mb-3"
-                >
-                  <div class="p-card-info text-start text-start">
-                    <span>From</span>
-                    <h6 class="mb-0" style="font-size: 16px">
-                      ₹84,960 /-<br /><small>For 2 adults & 2 kids</small>
-                    </h6>
-                  </div>
-                  <div class="book-btn" style="text-align: right">
-                    <a href="booknow.html" class="btn btn-primary btn-sm">
-                      Book Now <i class="bx bxs-right-arrow-alt"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="package-details">
-                  <h4 class="mb-2">Membership Highlights</h4>
-                  <ul class="list-unstyled mb-3">
-                    <li>
-                      <strong> Every 3 years Dream location</strong>
-                    </li>
-                    <li>15 Locations in India</li>
-                    <li>Location sightseeing India + Singapore</li>
-                    <li>10,000 sightseeing places and palaces</li>
-                    <li>Luxurious service and outdoor activities voucher</li>
-                    <li>Free 50-minute sightseeing film</li>
-                    <li>Free 100-photo sightseeing memories album</li>
-                    <li>
-                      Number of family members covered:
-                      <ul>
-                        <li>2 Adults + 2 Kids</li>
-                      </ul>
-                    </li>
-                  </ul>
+<br>
 
-                  <h4 class="mb-2">AMC Details</h4>
-                  <p class="mb-3">
-                    <strong>Annual Maintenance Cost (AMC): ₹12,500/-</strong>
-                  </p>
+    
+    <!-- Package Image -->
+    <div class="package-thumb mb-3">
+            <a href="booknow.html"></a>
+        <img
+          src="assets/images/international/pexels-photo-1842332.jpeg"
+          alt="Green Membership"
+          class="img-fluid rounded"
+          style="height: 255px"
+        />
+      </a>
+    </div>
 
-                  <!-- Read More Section -->
-                  <div id="more-info-rrm" style="display: none">
-                    <h4 class="mb-2">Benefits and Rights</h4>
-                    <ul class="list-unstyled mb-3">
-                      <li>1. Save 3 years</li>
-                      <li>2. Gift only to blood relations</li>
-                      <li>3. Split location by location</li>
-                      <li>4. Use 24x7 = 365 days</li>
-                      <li>5. Advance 3 years' membership</li>
-                      <li>6. 3 location sightseeing (every year)</li>
-                      <li>7. Transfer (Anywhere, Anytime)</li>
-                      <li>8. Rent out to friends circle</li>
-                    </ul>
-                  </div>
 
-                  <!-- Read More Button -->
-                  <a
-                    href="javascript:void(0);"
-                    class="text-primary read-more-btn"
-                    data-target="more-info-rrm"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Raja Rani Membership end -->
+    <!-- Membership Price and Booking Button -->
+    <div class="p-card-bottom d-flex justify-content-between align-items-center mb-3">
+      <div class="p-card-info text-start">
+        <span>From</span>
+<h6 class="mb-0" style="font-size: 14px"></h6>
+            ₹ 1,00,786 /-<br />
+            <small>For 3 adults & 4 kids</small>
+          </h6>
+      </div>
+<div class="book-btn" style="text-align: right;">
+  <a href="booknow.html" 
+     class="btn btn-primary btn-sm" 
+     style="background-color: green; border-color: green">
+    Book Now <i class="bx bxs-right-arrow-alt"></i>
+  </a>
+</div>
+
+    </div>
+
+    <!-- Membership Highlights -->
+    <div class="package-details">
+      <h4 class="mb-2">Membership Highlights</h4>
+<ul class="list-unstyled mb-3">
+            <li><i class="bx bx-calendar" style="color: #f4b400;"></i> Validity: 3 years</li> <!-- Added item -->
+                        <li><i class="bx bx-location-plus" style="color: #f4b400;"></i> Sightseeing places: 05 destinations (India)</li>
+
+        <li><i class="bx bx-map-pin" style="color: #f4b400;"></i> Sightseeing at 500+ Domestic & International Destinations</li>
+        <li><i class="bx bx-camera" style="color: #f4b400;"></i> Diverse indoor and outdoor activities</li>
+<li><i class="bx bx-wallet" style="color: #f4b400;"></i> ₹10,000 + discount on international flights</li>
+<li><i class="bx bx-film" style="color: #f4b400;"></i> Free movie tickets, flight assistance, attractive holiday packages, and other vouchers for our members</li>
+<li><i class="bx bx-car" style="color: #f4b400;"></i> Smooth pickup & drop facilities at no additional cost (total free)</li>
+<li><i class="bx bx-restaurant" style="color: #f4b400;"></i> Mouth-watering cuisine at no additional cost (total free)</li>
+      </ul>
+
+
+      <!-- AMC Details -->
+      <h4 class="mb-2">AMC Details</h4>
+      <p class="mb-3">
+        <strong>Annual Maintenance Cost (AMC): ₹12,500/- including GST</strong>
+      </p>
+
+      <!-- Benefits and Rights Section (Read More) -->
+      <div id="more-info-sm" style="display: none;">
+        <h4 class="mb-2">Benefits and Rights</h4>
+       <ul class="list-unstyled mb-3"></ul>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Save for only 3 years</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Gift to only blood relatives</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can be divided according to location</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can be used 24x7 = 365 days (except festivals)</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can go for sightseeing only three times in a year</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can do sightseeing for three years in advance in a year</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Transfer to other part (Anywhere, Anytime)</li>
+        </ul>
+
+        <!-- Special Offers -->
+        <h4 class="mb-2">Special Offers</h4>
+        <ul class="list-unstyled mb-3">
+          <li><i class="bx bx-film" style="color: #f4b400;"></i> 50-minute sightseeing film</li>
+          <li><i class="bx bx-photo" style="color: #f4b400;"></i> 100-photo sightseeing memories album</li>
+          <li><i class="bx bx-hotel" style="color: #f4b400;"></i> Accommodation in Hotel or Resort</li>
+        </ul>
+      </div>
+
+      <!-- Read More Button -->
+      <a href="javascript:void(0);" class="text-primary read-more-btn" style="color: #f4b400; text-decoration: none;" data-target="more-info-sm">
+        Read More
+      </a>
+    </div>
+  </div>
+</div>
+<!-- green Membership end -->
+
+          
+<!-- Saffron Membership start -->
+<div class="col-lg-4 col-md-6">
+  <div class="package-card-alpha h-100 p-3">
+
+        <!-- Membership Title with Logo -->
+<div class="d-flex align-items-center mb-3">
+  <!-- Logo on the left side -->
+  <img
+    src="assets/images/Photo_1726161078385.png" 
+    alt="SSM Logo"
+    class="img-fluid"
+    style="height: 70px; margin-right: 15px;" />
+  
+  <!-- Title shifted slightly to the left -->
+  <h3 class="p-card-title mb-0" style="text-align: left;">
+RajaRani Sightseeing Membership(RRSM)  </h3>
+</div>
+
+
+    
+    <!-- Package Image -->
+    <div class="package-thumb mb-3">
+      <!-- <a href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."> -->
+        <img
+          src="assets/images/indian pic/city-palace-3229617_640.jpg"
+          alt="RajaRani Membership"
+          class="img-fluid rounded"
+          style="height: 250px"
+        />
+      </a>
+    </div>
+
+
+    <!-- Membership Price and Booking Button -->
+    <div class="p-card-bottom d-flex justify-content-between align-items-center mb-3">
+      <div class="p-card-info text-start">
+        <span>From</span>
+        <h6 class="mb-0" style="font-size: 14px">
+            ₹84,960 /-<br /><small>For 2 adults & 2 kids</small>
+
+        </h6>
+      </div>
+<div class="book-btn" style="text-align: right;">
+  <a href="booknow.html" 
+     class="btn btn-primary btn-sm" 
+     style="background-color: purple; border-color: purple;">
+    Book Now <i class="bx bxs-right-arrow-alt"></i>
+  </a>
+</div>
+
+    </div>
+
+    <!-- Membership Highlights -->
+    <div class="package-details">
+      <h4 class="mb-2">Membership Highlights</h4>
+      <ul class="list-unstyled mb-3">
+            <li><i class="bx bx-calendar" style="color: #f4b400;"></i> Validity: 3 years</li> <!-- Added item -->
+            <li><i class="bx bx-location-plus" style="color: #f4b400;"></i> Sightseeing places: 05 destinations (India)</li>
+
+        <li><i class="bx bx-map-pin" style="color: #f4b400;"></i> Sightseeing at 500+ Domestic & International Destinations</li>
+        <li><i class="bx bx-camera" style="color: #f4b400;"></i> Diverse indoor and outdoor activities</li>
+<li><i class="bx bx-wallet" style="color: #f4b400;"></i> ₹10,000 + discount on international flights</li>
+<li><i class="bx bx-film" style="color: #f4b400;"></i> Free movie tickets, flight assistance, attractive holiday packages, and other vouchers for our members</li>
+<li><i class="bx bx-car" style="color: #f4b400;"></i> Smooth pickup & drop facilities at no additional cost (total free)</li>
+<li><i class="bx bx-restaurant" style="color: #f4b400;"></i> Mouth-watering cuisine at no additional cost (total free)</li>
+      </ul>
+
+      <!-- AMC Details -->
+      <h4 class="mb-2">AMC Details</h4>
+      <p class="mb-3">
+        <strong>Annual Maintenance Cost (AMC): ₹12,500/- including GST</strong>
+      </p>
+
+      <!-- Benefits and Rights Section (Read More) -->
+      <div id="more-info-sm" style="display: none;">
+        <h4 class="mb-2">Benefits and Rights</h4>
+        <ul class="list-unstyled mb-3">
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Save for only 3 years</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Gift to only blood relatives</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can be divided according to location</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can be used 24x7 = 365 days (except festivals)</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can go for sightseeing only three times in a year</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can do sightseeing for three years in advance in a year</li>
+          <li><i class="bx bx-check" style="color: #f4b400;"></i> Can Transfer to other part (Anywhere, Anytime)</li>
+        </ul>
+
+        <!-- Special Offers -->
+        <h4 class="mb-2">Full Payment : Special Offers</h4>
+        <ul class="list-unstyled mb-3">
+          <li><i class="bx bx-film" style="color: #f4b400;"></i> 50-minute sightseeing film</li>
+          <li><i class="bx bx-camera" style="color: #f4b400;"></i> 100-photo sightseeing memories album</li>
+          <li><i class="bx bx-hotel" style="color: #f4b400;"></i> Accommodation in (Hotel or Resort)</li>
+        </ul>
+      </div>
+
+      <!-- Read More Button -->
+      <a href="javascript:void(0);" class="text-primary read-more-btn" style="color: #f4b400; text-decoration: none;" data-target="more-info-sm">
+        Read More
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Saffron Membership end -->
+          
         </div>
       </div>
     </div>
@@ -1883,7 +1978,7 @@
                         </div>
                         <div class="testimonial-body">
                             <p>
-                                Paryatak guide planned everything. It was a stress-free experience from start to finish.
+                                Paryatak guide planned everything. It was a stress-free experience.
                             </p>
                             <div class="testimonial-bottom">
                                 <div class="reviewer-info">
@@ -2453,7 +2548,7 @@
     var date = document.getElementById('datepicker').value;
 
     // Construct the mailto URL with form data
-    var mailtoLink = 'mailto:sadhnakumari55555@gmail.com'
+    var mailtoLink = 'mailto:bookingparyatak@gmail.com'
                    + '?subject=Travel Inquiry'
                    + '&body=Destination: ' + destination
                    + '%0D%0ATravel Type: ' + travelType
